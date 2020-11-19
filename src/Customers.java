@@ -1,5 +1,5 @@
-import java.util
-import java.util.Scanner;*;
+import java.util.*;
+import java.util.Scanner;
 
 public class Customers {
 	
@@ -11,7 +11,7 @@ public class Customers {
 	private String email;
 	private String paymentInfo;
 	
-	public Customer() {
+	public Customers() {
 		
 		lastName = "";
 		firstName = "";
@@ -22,15 +22,14 @@ public class Customers {
 		paymentInfo = "";
 	}
 	
-	public Customer(String lName, String fName, Date birthday, String homeAddress, String phoneNumber, 
-						String emailAddress, String payment, ) {
-		
+	public Customers(String lName, String fName, Date birthday, String homeAddress, String phoneNumber,
+						String emailAddress, String payment) {
 		lastName = lName;
 		firstName = fName;
 		DoB = birthday;
 		address = homeAddress;
 		phoneNum = phoneNumber;
-		email = emailAdress;
+		email = emailAddress;
 		paymentInfo = payment;
 	}
 	
@@ -62,15 +61,14 @@ public class Customers {
 	
 	private Date getDoB() {
 		
-		return birthday;
+		return DoB;
 	}
 	
-	private getCustomer() {
-		
+	private Customers getCustomer() {
 		return this;
 	}
 	
-	private setCustomer() {
+	private void setCustomer() {
 		
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter last name: ");
@@ -81,12 +79,12 @@ public class Customers {
 		
 		System.out.print("Enter date of birth: ");
 		System.out.print("Year: ");
-		String y = in.nextInt();
+		int y = in.nextInt();
 		System.out.print("Month: ");
-		String m = in.nextInt();
+		int m = in.nextInt();
 		System.out.print("Day: ");
-		String d = in.nextInt();
-		Date birthday = new Date(y, m , d)
+		int d = in.nextInt();
+		Date birthday = new Date(y, m , d);
 		
 		System.out.print("Enter shipping/home address: ");
 		String homeAddress = in.next();
@@ -100,6 +98,6 @@ public class Customers {
 		System.out.print("Enter payment information: ");
 		String payment = in.next();
 		
-		Customer c = new Customer(lname, fname, birthday, homeAddress, phoneNumber, emailAddress, payment);
+		Customers c = new Customers(lname, fname, birthday, homeAddress, phoneNumber, emailAddress, payment);
 	}
 }
