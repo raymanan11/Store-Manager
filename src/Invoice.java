@@ -101,5 +101,5 @@ public class Invoice {
     public void setTaxRate(double taxRate) {
         this.taxRate = taxRate;
     }
-    
+
 }

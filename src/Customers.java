@@ -34,7 +34,6 @@ public class Customers {
 	}
 	
 	private String getCustomerName() {
-		
 		String name = firstName + " " + lastName;
 		return name;
 	}
@@ -84,7 +83,7 @@ public class Customers {
 		int m = in.nextInt();
 		System.out.print("Day: ");
 		int d = in.nextInt();
-		Date birthday = new Date(y, m , d);
+		Date birthday = new Date(y, m, d);
 		
 		System.out.print("Enter shipping/home address: ");
 		String homeAddress = in.next();
