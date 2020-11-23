@@ -116,6 +116,10 @@ public class Invoice {
         return totalProductsPrice;
     }
 
+    public double getEmployeeComissionAmount() {
+        return getTotalProductsPrice() * invoiceEmployee.getEmployeeCommissionPercentage();
+    }
+
     public void setInvoiceID(String invoiceID) {
         this.invoiceID = invoiceID;
     }
