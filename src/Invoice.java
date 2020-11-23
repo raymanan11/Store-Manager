@@ -136,6 +136,7 @@ public class Invoice {
 
     public void setInvoiceStatus(boolean invoiceStatus) {
         this.invoiceStatus = invoiceStatus;
+        invoiceCustomer.setActive(invoiceStatus);
     }
 
     public void setTaxRate(double taxRate) {
