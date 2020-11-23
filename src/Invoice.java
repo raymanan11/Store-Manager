@@ -1,8 +1,11 @@
+import java.util.Date;
+
 public class Invoice {
 
     private String invoiceID;
     private Customers invoiceCustomer;
     private String invoiceMethodOfPayment;
+    private Date invoiceDate;
     private Products[] invoiceProducts;
     private boolean invoiceStatus;
     private double amountPaid;
@@ -12,16 +15,18 @@ public class Invoice {
         invoiceID = "";
         invoiceCustomer = null;
         invoiceMethodOfPayment = "";
+        invoiceDate = null;
         invoiceProducts = null;
         invoiceStatus = false;
         amountPaid = 0;
         taxRate = 0;
     }
 
-    public Invoice(String invoiceID, Customers invoiceCustomer, String invoiceMethodOfPayment, Products[] invoiceProducts, boolean invoiceStatus, double amountPaid, double taxRate) {
+    public Invoice(String invoiceID, Customers invoiceCustomer, String invoiceMethodOfPayment, Date invoiceDate, Products[] invoiceProducts, boolean invoiceStatus, double amountPaid, double taxRate) {
         this.invoiceID = invoiceID;
         this.invoiceCustomer = invoiceCustomer;
         this.invoiceMethodOfPayment = invoiceMethodOfPayment;
+        this.invoiceDate = invoiceDate;
         this.invoiceProducts = invoiceProducts;
         this.invoiceStatus = invoiceStatus;
         this.amountPaid = amountPaid;
@@ -38,6 +43,10 @@ public class Invoice {
 
     public String getInvoiceMethodOfPayment() {
         return invoiceMethodOfPayment;
+    }
+
+    public Date getInvoiceDate() {
+        return invoiceDate;
     }
 
     public Products[] getInvoiceProducts() {
@@ -84,6 +93,10 @@ public class Invoice {
 
     public void setInvoiceCustomer(Customers invoiceCustomer) {
         this.invoiceCustomer = invoiceCustomer;
+    }
+
+    public void setInvoiceDate(Date invoiceDate) {
+        this.invoiceDate = invoiceDate;
     }
 
     public void setInvoiceMethodOfPayment(String invoiceMethodOfPayment) {
