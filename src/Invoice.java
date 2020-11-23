@@ -10,6 +10,9 @@ public class Invoice {
     private boolean invoiceStatus;
     private double amountPaid;
     private double taxRate;
+    private boolean pickUp;
+    private boolean delivery;
+    private double deliveryCharge;
 
     public Invoice() {
         invoiceID = "";
@@ -20,9 +23,14 @@ public class Invoice {
         invoiceStatus = false;
         amountPaid = 0;
         taxRate = 0;
+        pickUp = false;
+        delivery = false;
+        deliveryCharge = 0;
     }
 
-    public Invoice(String invoiceID, Customers invoiceCustomer, String invoiceMethodOfPayment, Date invoiceDate, Products[] invoiceProducts, boolean invoiceStatus, double amountPaid, double taxRate) {
+
+    public Invoice(String invoiceID, Customers invoiceCustomer, String invoiceMethodOfPayment, Date invoiceDate, Products[] invoiceProducts,
+                   boolean invoiceStatus, double amountPaid, double taxRate, boolean pickUp, boolean delivery, double deliveryCharge) {
         this.invoiceID = invoiceID;
         this.invoiceCustomer = invoiceCustomer;
         this.invoiceMethodOfPayment = invoiceMethodOfPayment;
@@ -31,6 +39,9 @@ public class Invoice {
         this.invoiceStatus = invoiceStatus;
         this.amountPaid = amountPaid;
         this.taxRate = taxRate;
+        this.pickUp = pickUp;
+        this.delivery = delivery;
+        this.deliveryCharge = deliveryCharge;
     }
 
     public String getInvoiceID() {
@@ -63,6 +74,22 @@ public class Invoice {
 
     public double getTaxRate() {
         return taxRate;
+    }
+
+    public boolean isInvoicePaid() {
+        return invoiceStatus;
+    }
+
+    public boolean isPickUp() {
+        return pickUp;
+    }
+
+    public boolean isDelivery() {
+        return delivery;
+    }
+
+    public double getDeliveryCharge() {
+        return deliveryCharge;
     }
 
     public double getInvoiceTotal() {
@@ -113,6 +140,20 @@ public class Invoice {
 
     public void setTaxRate(double taxRate) {
         this.taxRate = taxRate;
+    }
+
+    public void setPickUp(boolean pickUp) {
+        this.pickUp = pickUp;
+        delivery = !pickUp;
+    }
+
+    public void setDelivery(boolean delivery) {
+        this.delivery = delivery;
+        pickUp = !delivery;
+    }
+
+    public void setDeliveryCharge(double deliveryCharge) {
+        if (delivery) this.deliveryCharge = deliveryCharge;
     }
 
 }
