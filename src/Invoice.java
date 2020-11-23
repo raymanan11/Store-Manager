@@ -4,6 +4,7 @@ public class Invoice {
 
     private String invoiceID;
     private Customers invoiceCustomer;
+    private Employee invoiceEmployee;
     private String invoiceMethodOfPayment;
     private Date invoiceDate;
     private Products[] invoiceProducts;
@@ -29,10 +30,11 @@ public class Invoice {
     }
 
 
-    public Invoice(String invoiceID, Customers invoiceCustomer, String invoiceMethodOfPayment, Date invoiceDate, Products[] invoiceProducts,
+    public Invoice(String invoiceID, Customers invoiceCustomer, Employee invoiceEmployee, String invoiceMethodOfPayment, Date invoiceDate, Products[] invoiceProducts,
                    boolean invoiceStatus, double amountPaid, double taxRate, boolean pickUp, boolean delivery, double deliveryCharge) {
         this.invoiceID = invoiceID;
         this.invoiceCustomer = invoiceCustomer;
+        this.invoiceEmployee = invoiceEmployee;
         this.invoiceMethodOfPayment = invoiceMethodOfPayment;
         this.invoiceDate = invoiceDate;
         this.invoiceProducts = invoiceProducts;
@@ -50,6 +52,10 @@ public class Invoice {
 
     public Customers getInvoiceCustomer() {
         return invoiceCustomer;
+    }
+
+    public Employee getInvoiceEmployee() {
+        return invoiceEmployee;
     }
 
     public String getInvoiceMethodOfPayment() {
@@ -120,6 +126,10 @@ public class Invoice {
 
     public void setInvoiceCustomer(Customers invoiceCustomer) {
         this.invoiceCustomer = invoiceCustomer;
+    }
+
+    public void setInvoiceEmployee(Employee invoiceEmployee) {
+        this.invoiceEmployee = invoiceEmployee;
     }
 
     public void setInvoiceDate(Date invoiceDate) {

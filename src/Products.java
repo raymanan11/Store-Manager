@@ -62,10 +62,7 @@ public class Products {
     }
 
     public double getProfitPercent() {
-        // Net Income / Revenue * 100
-        // Net Income = getProfit()
-        // Revenue = ? (take into account expenses so employee commission as well?)
-        return 0;
+        return (getTotalSales() / getTotalCost()) * 100;
     }
 
     public void setProductName(String productName) {
