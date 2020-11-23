@@ -105,7 +105,7 @@ public class Invoice {
     private double getTotalProductsPrice() {
         double totalProductsPrice = 0;
         for (int i = 0; i < invoiceProducts.length; i++) {
-            totalProductsPrice += invoiceProducts[i].getPrice();
+            totalProductsPrice += invoiceProducts[i].getCostPrice();
         }
         return totalProductsPrice;
     }

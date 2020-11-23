@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ee60be-62a9-45c8-b30c-cf54d21f52d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Customers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1297">
+            <state relative-caret-position="2198">
               <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -47,11 +47,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Invoice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="138" column="34" selection-start-line="138" selection-start-column="34" selection-end-line="138" selection-end-column="34" />
+            <state relative-caret-position="144">
+              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Products.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="869">
+              <caret line="89" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="89" />
             </state>
           </provider>
         </entry>
@@ -75,6 +84,7 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/Customers.java" />
         <option value="$PROJECT_DIR$/src/Invoice.java" />
+        <option value="$PROJECT_DIR$/src/Products.java" />
       </list>
     </option>
   </component>
@@ -213,7 +223,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Customers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1297">
+        <state relative-caret-position="2198">
           <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -223,8 +233,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Invoice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="138" column="34" selection-start-line="138" selection-start-column="34" selection-end-line="138" selection-end-column="34" />
+        <state relative-caret-position="144">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Products.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="869">
+          <caret line="89" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="89" />
         </state>
       </provider>
     </entry>

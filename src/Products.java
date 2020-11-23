@@ -3,7 +3,7 @@ public class Products {
     private String productName;
     private int productNumber;
     private int quantity;
-    private double price;
+    private double costPrice;
     private double retailPrice;
     private int numberSold;
 
@@ -11,7 +11,7 @@ public class Products {
         productName = "";
         productNumber = 0;
         quantity = 0;
-        price = 0;
+        costPrice = 0;
         retailPrice = 0;
         numberSold = 0;
     }
@@ -20,7 +20,7 @@ public class Products {
         this.productName = productName;
         this.productNumber = productNumber;
         this.quantity = quantity;
-        this.price = price;
+        this.costPrice = price;
         this.retailPrice = retailPrice;
         this.numberSold = numberSold;
     }
@@ -37,8 +37,8 @@ public class Products {
         return quantity;
     }
 
-    public double getPrice() {
-        return price;
+    public double getCostPrice() {
+        return costPrice;
     }
 
     public double getRetailPrice() {
@@ -50,7 +50,7 @@ public class Products {
     }
 
     public double getProfit() {
-        return retailPrice - price * numberSold;
+        return retailPrice - costPrice;
     }
 
     public void setProductName(String productName) {
@@ -65,8 +65,8 @@ public class Products {
         this.quantity = quantity;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setCostPrice(double costPrice) {
+        this.costPrice = costPrice;
     }
 
     public void setRetailPrice(double retailPrice) {
@@ -81,7 +81,7 @@ public class Products {
         this.productName = productName;
         this.productNumber = productNumber;
         this.quantity = quantity;
-        this.price = price;
+        this.costPrice = price;
         this.retailPrice = retailPrice;
         this.numberSold = numberSold;
     }
