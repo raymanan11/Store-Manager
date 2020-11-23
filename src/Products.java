@@ -2,27 +2,27 @@ public class Products {
 
     private String productName;
     private int productNumber;
-    private int quantity;
+    private int quantityOnHand;
     private double costPrice;
     private double retailPrice;
-    private int numberSold;
+    private int quantitySold;
 
     public Products() {
         productName = "";
         productNumber = 0;
-        quantity = 0;
+        quantityOnHand = 0;
         costPrice = 0;
         retailPrice = 0;
-        numberSold = 0;
+        quantitySold = 0;
     }
 
-    public Products(String productName, int productNumber, int quantity, double price, double retailPrice, int numberSold) {
+    public Products(String productName, int productNumber, int quantity, double price, double retailPrice, int quantitySold) {
         this.productName = productName;
         this.productNumber = productNumber;
-        this.quantity = quantity;
+        this.quantityOnHand = quantity;
         this.costPrice = price;
         this.retailPrice = retailPrice;
-        this.numberSold = numberSold;
+        this.quantitySold = quantitySold;
     }
 
     public String getProductName() {
@@ -33,8 +33,8 @@ public class Products {
         return productNumber;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getQuantityOnHand() {
+        return quantityOnHand;
     }
 
     public double getCostPrice() {
@@ -45,12 +45,27 @@ public class Products {
         return retailPrice;
     }
 
-    public int getNumberSold() {
-        return numberSold;
+    public int getQuantitySold() {
+        return quantitySold;
+    }
+
+    public double getTotalSales() {
+        return quantitySold * retailPrice;
+    }
+
+    public double getTotalCost() {
+        return quantityOnHand * costPrice;
     }
 
     public double getProfit() {
-        return retailPrice - costPrice;
+        return getTotalSales() - getTotalCost();
+    }
+
+    public double getProfitPercent() {
+        // Net Income / Revenue * 100
+        // Net Income = getProfit()
+        // Revenue = ? (take into account expenses so employee commission as well?)
+        return 0;
     }
 
     public void setProductName(String productName) {
@@ -61,8 +76,8 @@ public class Products {
         this.productNumber = productNumber;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantityOnHand(int quantityOnHand) {
+        this.quantityOnHand = quantityOnHand;
     }
 
     public void setCostPrice(double costPrice) {
@@ -73,17 +88,17 @@ public class Products {
         this.retailPrice = retailPrice;
     }
 
-    public void setNumberSold(int numberSold) {
-        this.numberSold = numberSold;
+    public void setQuantitySold(int quantitySold) {
+        this.quantitySold = quantitySold;
     }
 
     public void setProduct(String productName, int productNumber, int quantity, double price, double retailPrice, int numberSold) {
         this.productName = productName;
         this.productNumber = productNumber;
-        this.quantity = quantity;
+        this.quantityOnHand = quantity;
         this.costPrice = price;
         this.retailPrice = retailPrice;
-        this.numberSold = numberSold;
+        this.quantitySold = numberSold;
     }
 
 }
