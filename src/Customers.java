@@ -10,7 +10,8 @@ public class Customers {
 	private String phoneNum;
 	private String email;
 	private String paymentInfo;
-	public boolean active;
+	private boolean active;
+	private double salesTaxPercentage;
 	
 	public Customers() {
 		lastName = "";
@@ -21,10 +22,11 @@ public class Customers {
 		email = "";
 		paymentInfo = "";
 		active = false;
+		salesTaxPercentage = 0;
 	}
 	
 	public Customers(String lName, String fName, Date birthday, String homeAddress, String phoneNumber,
-						String emailAddress, String payment, boolean active) {
+						String emailAddress, String payment, boolean active, double salesTaxPercentage) {
 		lastName = lName;
 		firstName = fName;
 		DoB = birthday;
@@ -33,6 +35,7 @@ public class Customers {
 		email = emailAddress;
 		paymentInfo = payment;
 		this.active = active;
+		this.salesTaxPercentage = salesTaxPercentage;
 	}
 	
 	private String getCustomerName() {
@@ -84,6 +87,10 @@ public class Customers {
 		return active;
 	}
 
+	public double getSalesTaxPercentage() {
+		return salesTaxPercentage;
+	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
@@ -116,36 +123,20 @@ public class Customers {
 		this.phoneNum = phoneNum;
 	}
 
-	private void setCustomer() {
+	public void setSalesTaxPercentage(double salesTaxPercentage) {
+		this.salesTaxPercentage = salesTaxPercentage;
+	}
 
-		Scanner in = new Scanner(System.in);
-		System.out.print("Enter last name: ");
-		String lname = in.next();
-
-		System.out.print("Enter first name: ");
-		String fname = in.next();
-
-		System.out.print("Enter date of birth: ");
-		System.out.print("Year: ");
-		int y = in.nextInt();
-		System.out.print("Month: ");
-		int m = in.nextInt();
-		System.out.print("Day: ");
-		int d = in.nextInt();
-		Date birthday = new Date(y, m, d);
-
-		System.out.print("Enter shipping/home address: ");
-		String homeAddress = in.next();
-
-		System.out.print("Enter phone number: ");
-		String phoneNumber = in.next();
-
-		System.out.print("Enter email address: ");
-		String emailAddress = in.next();
-
-		System.out.print("Enter payment information: ");
-		String payment = in.next();
-
-		Customers c = new Customers(lname, fname, birthday, homeAddress, phoneNumber, emailAddress, payment, active);
+	private void setCustomer(String lName, String fName, Date birthday, String homeAddress, String phoneNumber,
+						   String emailAddress, String payment, boolean active, double salesTaxPercentage) {
+		lastName = lName;
+		firstName = fName;
+		DoB = birthday;
+		address = homeAddress;
+		phoneNum = phoneNumber;
+		email = emailAddress;
+		paymentInfo = payment;
+		this.active = active;
+		this.salesTaxPercentage = salesTaxPercentage;
 	}
 }
