@@ -1,12 +1,14 @@
 package JavaSwingGUI;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Customers {
 	
 	private String lastName;
 	private String firstName;
-	private Date DoB;
+	private LocalDate DoB;
 	private String address;
 	private String phoneNum;
 	private String email;
@@ -17,7 +19,7 @@ public class Customers {
 	public Customers() {
 		lastName = "";
 		firstName = "";
-		DoB = new Date();
+		DoB = null;
 		address = "";
 		phoneNum = "";
 		email = "";
@@ -26,11 +28,11 @@ public class Customers {
 		salesTaxPercentage = 0;
 	}
 	
-	public Customers(String lName, String fName, Date birthday, String homeAddress, String phoneNumber,
+	public Customers(String lName, String fName, String birthday, String homeAddress, String phoneNumber,
 						String emailAddress, String payment, boolean active, double salesTaxPercentage) {
 		lastName = lName;
 		firstName = fName;
-		DoB = birthday;
+		setDateOfBirth(birthday);
 		address = homeAddress;
 		phoneNum = phoneNumber;
 		email = emailAddress;
@@ -63,7 +65,7 @@ public class Customers {
 		return paymentInfo;
 	}
 	
-	private Date getDoB() {
+	private LocalDate getDoB() {
 		
 		return DoB;
 	}
@@ -104,7 +106,7 @@ public class Customers {
 		this.address = address;
 	}
 
-	public void setDoB(Date doB) {
+	public void setDoB(LocalDate doB) {
 		DoB = doB;
 	}
 
@@ -128,11 +130,19 @@ public class Customers {
 		this.salesTaxPercentage = salesTaxPercentage;
 	}
 
-	private void setCustomer(String lName, String fName, Date birthday, String homeAddress, String phoneNumber,
+	public void setDateOfBirth(LocalDate DoB) {
+		this.DoB = DoB;
+	}
+
+	public void setDateOfBirth(String dateOfBirth) {
+		this.DoB = LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+	}
+
+	private void setCustomer(String lName, String fName, String birthday, String homeAddress, String phoneNumber,
 						   String emailAddress, String payment, boolean active, double salesTaxPercentage) {
 		lastName = lName;
 		firstName = fName;
-		DoB = birthday;
+		setDateOfBirth(birthday);
 		address = homeAddress;
 		phoneNum = phoneNumber;
 		email = emailAddress;
