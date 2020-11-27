@@ -1,5 +1,6 @@
+package JavaSwingGUI;
+
 import java.util.*;
-import java.util.Scanner;
 
 public class Customers {
 	

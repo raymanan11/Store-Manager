@@ -8,8 +8,6 @@ public class Main {
         MainScreen mainScreen = new MainScreen();
         mainScreen.setVisible(true);
 
-        System.out.println("hi");
-
 //        Student student = new Student("Raymond", 20);
 //
 //        Gson gson = new Gson();

@@ -1,3 +1,5 @@
+package JavaSwingGUI;
+
 public class Products {
 
     private String productName;

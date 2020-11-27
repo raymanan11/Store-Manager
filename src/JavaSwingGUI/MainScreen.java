@@ -11,6 +11,8 @@ public class MainScreen extends JFrame {
     private JButton invoicesClicked;
     private JButton employeesClicked;
     private JButton customersClicked;
+    private JPanel panelTop;
+    private JPanel panelBottom;
 
     public MainScreen() {
         super("Main Menu");
@@ -21,14 +23,15 @@ public class MainScreen extends JFrame {
         productsClicked.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Showing Products Menu");
+                System.out.println("Showing JavaSwingGUI.Products Menu");
             }
         });
 
         customersClicked.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Showing Customers Menu");
+                AddCustomers addCustomers = new AddCustomers();
+                addCustomers.setVisible(true);
             }
         });
 
