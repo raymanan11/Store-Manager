@@ -5,3 +5,4 @@
 {"customerName":"rtuujyuy","DoB":{"year":1980,"month":4,"day":12},"address":"rsteytyrt","phoneNum":"rtyrtywrtyrty","email":"rtyrtyrtyrtrt","paymentInfo":"yrtyrtyrty","active":true,"salesTaxPercentage":0.14}
 {"customerName":"John Ruther","DoB":{"year":1995,"month":4,"day":23},"address":"237 Peak Hill Lane","phoneNum":"325-851-8671","email":"jrtuerh@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":0.05}
 {"customerName":"Kobe James","DoB":{"year":1990,"month":9,"day":12},"address":"9134 Kite Road","phoneNum":"234-967-1283","email":"kobejames@gmail.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":0.03}
+{"customerName":"Jacque Smith","DoB":{"year":1990,"month":7,"day":9},"address":"6789 Juniper Road","phoneNum":"756-213-9337","email":"jaquesmith@gmail.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":0.08}

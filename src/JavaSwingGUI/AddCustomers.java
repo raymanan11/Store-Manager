@@ -1,8 +1,11 @@
 package JavaSwingGUI;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
@@ -54,6 +57,13 @@ public class AddCustomers extends JFrame {
         fileWriter = new FileWriter();
 
         refreshList();
+
+        listOfCustomers.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                populateTextFields(e);
+            }
+        });
     }
 
     public void addCustomer(ActionEvent e) {
@@ -73,6 +83,35 @@ public class AddCustomers extends JFrame {
 
         refreshList();
 
+        resetTextFields();
+
+    }
+
+    private void resetTextFields() {
+        textName.setText("");
+        textDoB.setText("");
+        textAddress.setText("");
+        textPhoneNumber.setText("");
+        textEmail.setText("");
+        textPaymentInfo.setText("");
+        active.setSelected(false);
+        textSalesTaxPercentage.setText("");
+    }
+
+    public void populateTextFields(ListSelectionEvent e) {
+        int customerNumber = listOfCustomers.getSelectedIndex();
+        if (customerNumber >= 0 && jsonResults.size() > 0) {
+            String selectedCustomerJSON = jsonResults.get(customerNumber);
+            Customers customer = gson.fromJson(selectedCustomerJSON, Customers.class);
+            textName.setText(customer.getCustomerName());
+            textDoB.setText(customer.getDoB().format((DateTimeFormatter.ofPattern("MM/dd/yyyy"))));
+            textAddress.setText(customer.getCustomerAddress());
+            textPhoneNumber.setText(customer.getPhoneNum());
+            textEmail.setText(customer.getCustomerEmail());
+            textPaymentInfo.setText(customer.getCustomerPaymentInfo());
+            active.setSelected(customer.isActive());
+            textSalesTaxPercentage.setText(String.valueOf(customer.getSalesTaxPercentage()));
+        }
     }
 
     public void refreshList() {
