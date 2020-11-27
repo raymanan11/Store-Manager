@@ -3,6 +3,8 @@ package JavaSwingGUI;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import com.google.gson.Gson;
 
 public class AddCustomers extends JFrame {
@@ -25,6 +27,7 @@ public class AddCustomers extends JFrame {
     private DefaultListModel listCustomersModel;
 
     private Gson gson;
+    private ArrayList<String> jsonResults;
 
     public FileWriter fileWriter;
 
@@ -49,6 +52,8 @@ public class AddCustomers extends JFrame {
 
         gson = new Gson();
         fileWriter = new FileWriter();
+
+        refreshList();
     }
 
     public void addCustomer(ActionEvent e) {
@@ -66,19 +71,17 @@ public class AddCustomers extends JFrame {
 
         fileWriter.writeFile(json, "Customers.txt");
 
+        refreshList();
+
     }
 
-    //        Student student = new Student("Raymond", 20);
-//
-//        Gson gson = new Gson();
-//
-//        String json = gson.toJson(student);
-//
-//        System.out.println(json);
-//        System.out.println();
-//
-//        Student student2 = gson.fromJson(json, Student.class);
-//
-//        System.out.println(student2.name);
-//        System.out.println(student2.age);
+    public void refreshList() {
+        jsonResults = fileWriter.readFile("Customers.txt");
+        listCustomersModel.removeAllElements();
+        for (String customerJSON : jsonResults) {
+            Customers customer = gson.fromJson(customerJSON, Customers.class);
+            listCustomersModel.addElement(customer.getCustomerName());
+        }
+    }
+
 }

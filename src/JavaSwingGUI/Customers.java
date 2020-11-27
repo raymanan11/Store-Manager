@@ -38,36 +38,36 @@ public class Customers {
 		this.salesTaxPercentage = salesTaxPercentage;
 	}
 	
-	private String getCustomerName() {
+	public String getCustomerName() {
 		return customerName;
 	}
-	
-	private String getCustomerAddress() {
+
+	public String getCustomerAddress() {
 		
 		return address;
 	}
-	
-	private String getCustomerPhoneNumber() {
+
+	public String getCustomerPhoneNumber() {
 		
 		return phoneNum;
 	}
-	
-	private String getCustomerEmail() {
+
+	public String getCustomerEmail() {
 		
 		return email;
 	}
-	
-	private String getCustomerPaymentInfo() {
+
+	public String getCustomerPaymentInfo() {
 		
 		return paymentInfo;
 	}
-	
-	private LocalDate getDoB() {
+
+	public LocalDate getDoB() {
 		
 		return DoB;
 	}
-	
-	private Customers getCustomer() {
+
+	public Customers getCustomer() {
 		return this;
 	}
 
@@ -121,10 +121,10 @@ public class Customers {
 	}
 
 	public void setDateOfBirth(String dateOfBirth) {
-		this.DoB = LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		this.DoB = LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
 	}
 
-	private void setCustomer(String customerName, String birthday, String homeAddress, String phoneNumber,
+	public void setCustomer(String customerName, String birthday, String homeAddress, String phoneNumber,
 						   String emailAddress, String payment, boolean active, double salesTaxPercentage) {
 		this.customerName = customerName;
 		setDateOfBirth(birthday);
