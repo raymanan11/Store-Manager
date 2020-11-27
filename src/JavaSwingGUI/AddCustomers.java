@@ -3,6 +3,7 @@ package JavaSwingGUI;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import com.google.gson.Gson;
 
 public class AddCustomers extends JFrame {
     private JPanel customersPanel;
@@ -14,19 +15,27 @@ public class AddCustomers extends JFrame {
     private JTextField textPhoneNumber;
     private JTextField textEmail;
     private JTextField textPaymentInfo;
-    private JTextField textActive;
     private JTextField textSalesTaxPercentage;
     private JScrollBar scrollBar1;
     private JPanel panelRight;
     private JPanel panelLeft;
     private JButton addButton;
     private JPanel panelTop;
+    private JCheckBox active;
+    private DefaultListModel listCustomersModel;
+
+    private Gson gson;
 
     public AddCustomers() {
-        super("JavaSwingGUI.Customers");
+
+        super("Customers");
         this.setContentPane(this.customersPanel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
+
+        listCustomersModel = new DefaultListModel();
+        listOfCustomers.setModel(listCustomersModel);
+
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -35,9 +44,39 @@ public class AddCustomers extends JFrame {
                 addCustomer(e);
             }
         });
+
+        gson = new Gson();
     }
 
     public void addCustomer(ActionEvent e) {
+        Customers customer = new Customers(
+                textName.getText(),
+                textDoB.getText(),
+                textAddress.getText(),
+                textPhoneNumber.getText(),
+                textEmail.getText(),
+                textPaymentInfo.getText(),
+                active.isSelected(),
+                Double.parseDouble(textSalesTaxPercentage.getText()));
 
+        String json = gson.toJson(customer);
+
+        System.out.println(json);
+        
+        // write JSON string to txt file
     }
+
+    //        Student student = new Student("Raymond", 20);
+//
+//        Gson gson = new Gson();
+//
+//        String json = gson.toJson(student);
+//
+//        System.out.println(json);
+//        System.out.println();
+//
+//        Student student2 = gson.fromJson(json, Student.class);
+//
+//        System.out.println(student2.name);
+//        System.out.println(student2.age);
 }

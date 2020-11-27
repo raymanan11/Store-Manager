@@ -6,8 +6,7 @@ import java.util.*;
 
 public class Customers {
 	
-	private String lastName;
-	private String firstName;
+	private String customerName;
 	private LocalDate DoB;
 	private String address;
 	private String phoneNum;
@@ -17,8 +16,7 @@ public class Customers {
 	private double salesTaxPercentage;
 	
 	public Customers() {
-		lastName = "";
-		firstName = "";
+		customerName = "";
 		DoB = null;
 		address = "";
 		phoneNum = "";
@@ -28,10 +26,9 @@ public class Customers {
 		salesTaxPercentage = 0;
 	}
 	
-	public Customers(String lName, String fName, String birthday, String homeAddress, String phoneNumber,
+	public Customers(String customerName, String birthday, String homeAddress, String phoneNumber,
 						String emailAddress, String payment, boolean active, double salesTaxPercentage) {
-		lastName = lName;
-		firstName = fName;
+		customerName = "";
 		setDateOfBirth(birthday);
 		address = homeAddress;
 		phoneNum = phoneNumber;
@@ -42,7 +39,7 @@ public class Customers {
 	}
 	
 	private String getCustomerName() {
-		return firstName + " " + lastName;
+		return customerName;
 	}
 	
 	private String getCustomerAddress() {
@@ -74,13 +71,6 @@ public class Customers {
 		return this;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
 
 	public String getPhoneNum() {
 		return phoneNum;
@@ -94,16 +84,12 @@ public class Customers {
 		return salesTaxPercentage;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
 
 	public void setDoB(LocalDate doB) {
@@ -138,10 +124,9 @@ public class Customers {
 		this.DoB = LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 	}
 
-	private void setCustomer(String lName, String fName, String birthday, String homeAddress, String phoneNumber,
+	private void setCustomer(String customerName, String birthday, String homeAddress, String phoneNumber,
 						   String emailAddress, String payment, boolean active, double salesTaxPercentage) {
-		lastName = lName;
-		firstName = fName;
+		this.customerName = customerName;
 		setDateOfBirth(birthday);
 		address = homeAddress;
 		phoneNum = phoneNumber;

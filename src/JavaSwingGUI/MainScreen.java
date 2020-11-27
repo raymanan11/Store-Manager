@@ -23,7 +23,7 @@ public class MainScreen extends JFrame {
         productsClicked.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Showing JavaSwingGUI.Products Menu");
+                System.out.println("Showing Products Menu");
             }
         });
 
