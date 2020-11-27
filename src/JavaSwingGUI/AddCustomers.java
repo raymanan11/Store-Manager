@@ -26,6 +26,8 @@ public class AddCustomers extends JFrame {
 
     private Gson gson;
 
+    public FileWriter fileWriter;
+
     public AddCustomers() {
 
         super("Customers");
@@ -46,6 +48,7 @@ public class AddCustomers extends JFrame {
         });
 
         gson = new Gson();
+        fileWriter = new FileWriter();
     }
 
     public void addCustomer(ActionEvent e) {
@@ -61,9 +64,8 @@ public class AddCustomers extends JFrame {
 
         String json = gson.toJson(customer);
 
-        System.out.println(json);
-        
-        // write JSON string to txt file
+        fileWriter.writeFile(json, "Customers.txt");
+
     }
 
     //        Student student = new Student("Raymond", 20);

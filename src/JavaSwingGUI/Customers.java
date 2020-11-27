@@ -28,7 +28,7 @@ public class Customers {
 	
 	public Customers(String customerName, String birthday, String homeAddress, String phoneNumber,
 						String emailAddress, String payment, boolean active, double salesTaxPercentage) {
-		customerName = "";
+		this.customerName = customerName;
 		setDateOfBirth(birthday);
 		address = homeAddress;
 		phoneNum = phoneNumber;

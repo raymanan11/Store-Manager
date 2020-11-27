@@ -1,0 +1,1 @@
+{"customerName":"Raymond An","DoB":{"year":2000,"month":5,"day":8},"address":"235 Brackets Street","phoneNum":"714-640-7974","email":"raymondan100@gmail.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":0.075}
