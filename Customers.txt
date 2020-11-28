@@ -1,8 +1,7 @@
 {"customerName":"Jackson Hammy","DoB":{"year":2000,"month":8,"day":5},"address":"235 Sandhills Lane","phoneNum":"345-658-1284","email":"raymondan100@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":0.075}
 {"customerName":"Raymond An","DoB":{"year":1998,"month":11,"day":23},"address":"348 Jane Lane","phoneNum":"234-961-3464","email":"lotsoflollipops@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":0.15}
 {"customerName":"Thomas Jacob","DoB":{"year":1995,"month":5,"day":12},"address":"238 Umbrella Avenue","phoneNum":"234-872-8231","email":"tjacob@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":0.25}
-{"customerName":"ert7yr6u5","DoB":{"year":2010,"month":3,"day":12},"address":"wer34565","phoneNum":"34565346","email":"4356456","paymentInfo":"456456","active":true,"salesTaxPercentage":45.0}
-{"customerName":"rtuujyuy","DoB":{"year":1980,"month":4,"day":12},"address":"rsteytyrt","phoneNum":"rtyrtywrtyrty","email":"rtyrtyrtyrtrt","paymentInfo":"yrtyrtyrty","active":true,"salesTaxPercentage":0.14}
 {"customerName":"John Ruther","DoB":{"year":1995,"month":4,"day":23},"address":"237 Peak Hill Lane","phoneNum":"325-851-8671","email":"jrtuerh@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":0.05}
 {"customerName":"Kobe James","DoB":{"year":1990,"month":9,"day":12},"address":"9134 Kite Road","phoneNum":"234-967-1283","email":"kobejames@gmail.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":0.03}
 {"customerName":"Jacque Smith","DoB":{"year":1990,"month":7,"day":9},"address":"6789 Juniper Road","phoneNum":"756-213-9337","email":"jaquesmith@gmail.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":0.08}
+{"customerName":"Leviathon Handlebar","DoB":{"year":1990,"month":6,"day":23},"address":"6789 Peachtree Road","phoneNum":"453-7526-7524","email":"leviathon@gmail.com","paymentInfo":"Check","active":false,"salesTaxPercentage":0.15}

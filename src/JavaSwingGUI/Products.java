@@ -3,36 +3,31 @@ package JavaSwingGUI;
 public class Products {
 
     private String productName;
-    private int productNumber;
-    private int quantityOnHand;
     private double costPrice;
     private double retailPrice;
+    private int quantityOnHand;
     private int quantitySold;
+    private int warehouseNumber;
 
     public Products() {
         productName = "";
-        productNumber = 0;
         quantityOnHand = 0;
         costPrice = 0;
         retailPrice = 0;
         quantitySold = 0;
     }
 
-    public Products(String productName, int productNumber, int quantity, double price, double retailPrice, int quantitySold) {
+    public Products(String productName, double costPrice, double retailPrice, int quantityOnHand, int quantitySold, int warehouseNumber) {
         this.productName = productName;
-        this.productNumber = productNumber;
-        this.quantityOnHand = quantity;
-        this.costPrice = price;
+        this.costPrice = costPrice;
         this.retailPrice = retailPrice;
+        this.quantityOnHand = quantityOnHand;
         this.quantitySold = quantitySold;
+        this.warehouseNumber = warehouseNumber;
     }
 
     public String getProductName() {
         return productName;
-    }
-
-    public int getProductNumber() {
-        return productNumber;
     }
 
     public int getQuantityOnHand() {
@@ -49,6 +44,10 @@ public class Products {
 
     public int getQuantitySold() {
         return quantitySold;
+    }
+
+    public int getWarehouseNumber() {
+        return warehouseNumber;
     }
 
     public double getTotalSales() {
@@ -71,10 +70,6 @@ public class Products {
         this.productName = productName;
     }
 
-    public void setProductNumber(int productNumber) {
-        this.productNumber = productNumber;
-    }
-
     public void setQuantityOnHand(int quantityOnHand) {
         this.quantityOnHand = quantityOnHand;
     }
@@ -91,13 +86,17 @@ public class Products {
         this.quantitySold = quantitySold;
     }
 
-    public void setProduct(String productName, int productNumber, int quantity, double price, double retailPrice, int numberSold) {
+    public void setWarehouseNumber(int warehouseNumber) {
+        this.warehouseNumber = warehouseNumber;
+    }
+
+    public void setProducts(String productName, double costPrice, double retailPrice, int quantityOnHand, int quantitySold, int warehouseNumber) {
         this.productName = productName;
-        this.productNumber = productNumber;
-        this.quantityOnHand = quantity;
-        this.costPrice = price;
+        this.costPrice = costPrice;
         this.retailPrice = retailPrice;
-        this.quantitySold = numberSold;
+        this.quantityOnHand = quantityOnHand;
+        this.quantitySold = quantitySold;
+        this.warehouseNumber = warehouseNumber;
     }
 
 }
