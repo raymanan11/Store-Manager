@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
-public class AddCustomers extends JFrame {
+public class AddCustomersScren extends JFrame {
     private JPanel customersPanel;
     private JLabel customersTitle;
     private JList listOfCustomers;
@@ -34,7 +34,7 @@ public class AddCustomers extends JFrame {
 
     public FileWriter fileWriter;
 
-    public AddCustomers() {
+    public AddCustomersScren() {
 
         super("Customers");
         this.setContentPane(this.customersPanel);

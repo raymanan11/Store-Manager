@@ -1,11 +1,10 @@
-import JavaSwingGUI.MainScreen;
-import com.google.gson.Gson;
+import JavaSwingGUI.MainMenu;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        MainScreen mainScreen = new MainScreen();
+        MainMenu mainScreen = new MainMenu();
         mainScreen.setVisible(true);
 
 //        Student student = new Student("Raymond", 20);

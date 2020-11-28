@@ -8,7 +8,7 @@ import java.util.InputMismatchException;
 
 import com.google.gson.Gson;
 
-public class AddProducts extends JFrame {
+public class AddProductsScreen extends JFrame {
     private JPanel panelProducts;
     private JTextField textProduct;
     private JTextField textCostPrice;
@@ -21,7 +21,7 @@ public class AddProducts extends JFrame {
     private Gson gson;
     public FileWriter fileWriter;
 
-    public AddProducts() {
+    public AddProductsScreen() {
 
         super("Add Products");
         this.setContentPane(this.panelProducts);

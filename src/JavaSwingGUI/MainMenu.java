@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainScreen extends JFrame {
+public class MainMenu extends JFrame {
 
     private JPanel mainScreenPanel;
     private JButton productsClicked;
@@ -14,7 +14,7 @@ public class MainScreen extends JFrame {
     private JPanel panelTop;
     private JPanel panelBottom;
 
-    public MainScreen() {
+    public MainMenu() {
         super("Main Menu");
         this.setContentPane(this.mainScreenPanel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,7 +31,7 @@ public class MainScreen extends JFrame {
         customersClicked.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AddCustomers addCustomers = new AddCustomers();
+                AddCustomersScren addCustomers = new AddCustomersScren();
                 addCustomers.setVisible(true);
             }
         });
