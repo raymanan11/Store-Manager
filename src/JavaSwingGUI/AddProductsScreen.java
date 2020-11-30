@@ -61,7 +61,9 @@ public class AddProductsScreen extends JFrame {
 
                 fileWriter.writeFile(json, "Products.txt");
 
-                messageWindow.showWindow("Added Product");
+                resetTextFields();
+
+                messageWindow.showWindow("Added Product!");
             }
             else {
                 messageWindow.showWindow("Invalid warehouse number. Please edit number of warehouses if you want to proceed.");
@@ -73,5 +75,14 @@ public class AddProductsScreen extends JFrame {
             System.out.println("Invalid input number!");
             messageWindow.showWindow("Invalid input number!");
         }
+    }
+
+    public void resetTextFields() {
+        textProduct.setText("");
+        textCostPrice.setText("");
+        textRetailPrice.setText("");
+        textNumberOnHand.setText("");
+        textNumberSold.setText("");
+        textWarehouseNumber.setText("");
     }
 }
