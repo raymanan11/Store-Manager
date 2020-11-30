@@ -5,3 +5,4 @@
 {"customerName":"Kobe James","DoB":{"year":1990,"month":9,"day":12},"address":"9134 Kite Road","phoneNum":"234-967-1283","email":"kobejames@gmail.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":0.03}
 {"customerName":"Jacque Smith","DoB":{"year":1990,"month":7,"day":9},"address":"6789 Juniper Road","phoneNum":"756-213-9337","email":"jaquesmith@gmail.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":0.08}
 {"customerName":"Leviathon Handlebar","DoB":{"year":1990,"month":6,"day":23},"address":"6789 Peachtree Road","phoneNum":"453-7526-7524","email":"leviathon@gmail.com","paymentInfo":"Check","active":false,"salesTaxPercentage":0.15}
+{"customerName":"Kin Ly","DoB":{"year":1969,"month":9,"day":22},"address":"841 Lakeview Lane","phoneNum":"234-962-8452","email":"kinanly@yahoo.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":0.2}
