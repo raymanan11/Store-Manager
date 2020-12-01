@@ -3,6 +3,7 @@ package JavaSwingGUI;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.format.DateTimeFormatter;
@@ -28,6 +29,7 @@ public class AddEditCustomersScren extends JFrame {
     private JPanel panelTop;
     private JCheckBox active;
     private JButton updateButton;
+    private JScrollPane customersScroll;
     private DefaultListModel listCustomersModel;
 
     private Gson gson;
@@ -38,9 +40,11 @@ public class AddEditCustomersScren extends JFrame {
     public AddEditCustomersScren() {
 
         super("Add / Edit Customers");
+        setPreferredSize(new Dimension(900, 650));
         this.setContentPane(this.customersPanel);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
+        this.setLocationRelativeTo(null);
 
         listCustomersModel = new DefaultListModel();
         listOfCustomers.setModel(listCustomersModel);

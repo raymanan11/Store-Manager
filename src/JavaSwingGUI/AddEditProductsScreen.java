@@ -3,11 +3,9 @@ package JavaSwingGUI;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
@@ -34,9 +32,11 @@ public class AddEditProductsScreen extends JFrame {
     public AddEditProductsScreen() {
 
         super("Add / Edit Products");
+        setPreferredSize(new Dimension(900, 650));
         this.setContentPane(this.panelProducts);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
+        this.setLocationRelativeTo(null);
 
         listProductsModel = new DefaultListModel();
         productsList.setModel(listProductsModel);

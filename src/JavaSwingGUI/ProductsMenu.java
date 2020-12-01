@@ -1,6 +1,7 @@
 package JavaSwingGUI;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,9 +13,11 @@ public class ProductsMenu extends JFrame {
     public ProductsMenu() {
 
         super("Products Menu");
+        setPreferredSize(new Dimension(500, 350));
         this.setContentPane(this.panelProductsMenu);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
+        this.setLocationRelativeTo(null);
 
         addProductsButton.addActionListener(new ActionListener() {
             @Override
