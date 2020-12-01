@@ -6,6 +6,7 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
@@ -32,7 +33,8 @@ public class AddCustomersScren extends JFrame {
     private Gson gson;
     private ArrayList<String> jsonResults;
 
-    public FileWriter fileWriter;
+    private FileWriter fileWriter;
+    private Message messageWindow;
 
     public AddCustomersScren() {
 
@@ -55,6 +57,7 @@ public class AddCustomersScren extends JFrame {
 
         gson = new Gson();
         fileWriter = new FileWriter();
+        messageWindow = new Message();
 
         refreshList();
 
@@ -67,23 +70,34 @@ public class AddCustomersScren extends JFrame {
     }
 
     public void addCustomer(ActionEvent e) {
-        Customers customer = new Customers(
-                textName.getText(),
-                textDoB.getText(),
-                textAddress.getText(),
-                textPhoneNumber.getText(),
-                textEmail.getText(),
-                textPaymentInfo.getText(),
-                active.isSelected(),
-                Double.parseDouble(textSalesTaxPercentage.getText()));
+        try {
+            Customers customer = new Customers(
+                    textName.getText(),
+                    textDoB.getText(),
+                    textAddress.getText(),
+                    textPhoneNumber.getText(),
+                    textEmail.getText(),
+                    textPaymentInfo.getText(),
+                    active.isSelected(),
+                    Double.parseDouble(textSalesTaxPercentage.getText()));
 
-        String json = gson.toJson(customer);
+            String json = gson.toJson(customer);
 
-        fileWriter.writeFile(json, "Customers.txt");
+            fileWriter.writeFile(json, "Customers.txt");
 
-        refreshList();
+            refreshList();
 
-        resetTextFields();
+            resetTextFields();
+
+            messageWindow.showWindow("Added Customer!");
+        }
+        catch (NumberFormatException excpt) {
+            messageWindow.showWindow("Invalid Sales Tax % entry. Please enter a valid number.");
+        }
+
+        catch (DateTimeParseException excpt) {
+            messageWindow.showWindow("Invalid Date of Birth entry. " + '\n' + "Please format Date of Birth as dd/MM/yyyy (i.e. 08/24/1995), Month between 1-12 and Date corresponds to number of days in respective month.");
+        }
 
     }
 
