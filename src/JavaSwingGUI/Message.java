@@ -9,6 +9,6 @@ public class Message {
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
         panel.add(error, BorderLayout.CENTER);
-        JOptionPane.showMessageDialog(null, panel, "Error Message", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, panel, "Message", JOptionPane.PLAIN_MESSAGE);
     }
 }

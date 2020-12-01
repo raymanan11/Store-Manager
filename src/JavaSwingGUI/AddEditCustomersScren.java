@@ -37,7 +37,7 @@ public class AddEditCustomersScren extends JFrame {
 
     public AddEditCustomersScren() {
 
-        super("Customers");
+        super("Add / Edit Customers");
         this.setContentPane(this.customersPanel);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();

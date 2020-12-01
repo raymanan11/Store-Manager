@@ -33,7 +33,7 @@ public class AddEditProductsScreen extends JFrame {
 
     public AddEditProductsScreen() {
 
-        super("Add Products");
+        super("Add / Edit Products");
         this.setContentPane(this.panelProducts);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
