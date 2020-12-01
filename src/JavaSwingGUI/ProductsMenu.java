@@ -13,7 +13,7 @@ public class ProductsMenu extends JFrame {
 
         super("Products Menu");
         this.setContentPane(this.panelProductsMenu);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
 
         addProductsButton.addActionListener(new ActionListener() {

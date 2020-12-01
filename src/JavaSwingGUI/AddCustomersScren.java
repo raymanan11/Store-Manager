@@ -38,7 +38,7 @@ public class AddCustomersScren extends JFrame {
 
         super("Customers");
         this.setContentPane(this.customersPanel);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
 
         listCustomersModel = new DefaultListModel();
