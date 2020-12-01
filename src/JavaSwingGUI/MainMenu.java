@@ -31,7 +31,7 @@ public class MainMenu extends JFrame {
         customersClicked.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AddCustomersScren addCustomers = new AddCustomersScren();
+                AddEditCustomersScren addCustomers = new AddEditCustomersScren();
                 addCustomers.setVisible(true);
             }
         });

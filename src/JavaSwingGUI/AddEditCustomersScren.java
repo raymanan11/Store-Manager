@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
-public class AddCustomersScren extends JFrame {
+public class AddEditCustomersScren extends JFrame {
     private JPanel customersPanel;
     private JLabel customersTitle;
     private JList listOfCustomers;
@@ -32,11 +32,10 @@ public class AddCustomersScren extends JFrame {
 
     private Gson gson;
     private ArrayList<String> jsonResults;
-
     private FileWriter fileWriter;
     private Message messageWindow;
 
-    public AddCustomersScren() {
+    public AddEditCustomersScren() {
 
         super("Customers");
         this.setContentPane(this.customersPanel);
@@ -48,12 +47,21 @@ public class AddCustomersScren extends JFrame {
 
         updateButton.setEnabled(false);
 
+        gson = new Gson();
+        jsonResults = new ArrayList<>();
+        fileWriter = new FileWriter();
+        messageWindow = new Message();
+
+        refreshList();
+
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // add to JavaSwingGUI.Customers.txt file
                 // refresh list so name is updated
                 addCustomer(e);
+                refreshList();
+                resetTextFields();
             }
         });
 
@@ -61,14 +69,10 @@ public class AddCustomersScren extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 updateCustomer(e);
+                refreshList();
+                resetTextFields();
             }
         });
-
-        gson = new Gson();
-        fileWriter = new FileWriter();
-        messageWindow = new Message();
-
-        refreshList();
 
         listOfCustomers.addListSelectionListener(new ListSelectionListener() {
             @Override
@@ -95,10 +99,6 @@ public class AddCustomersScren extends JFrame {
 
             fileWriter.writeFile(json, "Customers.txt");
 
-            refreshList();
-
-            resetTextFields();
-
             updateButton.setEnabled(false);
 
             messageWindow.showWindow("Added Customer!");
@@ -116,15 +116,11 @@ public class AddCustomersScren extends JFrame {
     public void updateCustomer(ActionEvent e) {
         int customerNumber = listOfCustomers.getSelectedIndex();
         try {
-            String jsonResult = jsonResults.get(customerNumber);
             Customers customer = getUpdatedCustomer();
             String jsonUpdatedResult = gson.toJson(customer);
             jsonResults.remove(customerNumber);
             jsonResults.add(customerNumber, jsonUpdatedResult);
             fileWriter.writeFile(jsonResults, "Customers.txt");
-
-            refreshList();
-            resetTextFields();
 
             messageWindow.showWindow("Updated Customer!");
         }
