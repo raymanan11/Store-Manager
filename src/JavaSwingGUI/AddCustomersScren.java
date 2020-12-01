@@ -22,12 +22,12 @@ public class AddCustomersScren extends JFrame {
     private JTextField textEmail;
     private JTextField textPaymentInfo;
     private JTextField textSalesTaxPercentage;
-    private JScrollBar scrollBar1;
     private JPanel panelRight;
     private JPanel panelLeft;
     private JButton addButton;
     private JPanel panelTop;
     private JCheckBox active;
+    private JButton updateButton;
     private DefaultListModel listCustomersModel;
 
     private Gson gson;
@@ -46,12 +46,21 @@ public class AddCustomersScren extends JFrame {
         listCustomersModel = new DefaultListModel();
         listOfCustomers.setModel(listCustomersModel);
 
+        updateButton.setEnabled(false);
+
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // add to JavaSwingGUI.Customers.txt file
                 // refresh list so name is updated
                 addCustomer(e);
+            }
+        });
+
+        updateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                updateCustomer(e);
             }
         });
 
@@ -64,6 +73,7 @@ public class AddCustomersScren extends JFrame {
         listOfCustomers.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
+                updateButton.setEnabled(true);
                 populateTextFields(e);
             }
         });
@@ -89,6 +99,8 @@ public class AddCustomersScren extends JFrame {
 
             resetTextFields();
 
+            updateButton.setEnabled(false);
+
             messageWindow.showWindow("Added Customer!");
         }
         catch (NumberFormatException excpt) {
@@ -99,6 +111,42 @@ public class AddCustomersScren extends JFrame {
             messageWindow.showWindow("Invalid Date of Birth entry. " + '\n' + "Please format Date of Birth as dd/MM/yyyy (i.e. 08/24/1995), Month between 1-12 and Date corresponds to number of days in respective month.");
         }
 
+    }
+
+    public void updateCustomer(ActionEvent e) {
+        int customerNumber = listOfCustomers.getSelectedIndex();
+        try {
+            String jsonResult = jsonResults.get(customerNumber);
+            Customers customer = getUpdatedCustomer();
+            String jsonUpdatedResult = gson.toJson(customer);
+            jsonResults.remove(customerNumber);
+            jsonResults.add(customerNumber, jsonUpdatedResult);
+            fileWriter.writeFile(jsonResults, "Customers.txt");
+
+            refreshList();
+            resetTextFields();
+
+            messageWindow.showWindow("Updated Customer!");
+        }
+        catch (NumberFormatException excpt) {
+            messageWindow.showWindow("Invalid Sales Tax % entry. Please enter a valid number.");
+        }
+
+        catch (DateTimeParseException excpt) {
+            messageWindow.showWindow("Invalid Date of Birth entry. " + '\n' + "Please format Date of Birth as dd/MM/yyyy (i.e. 08/24/1995), Month between 1-12 and Date corresponds to number of days in respective month.");
+        }
+    }
+
+    private Customers getUpdatedCustomer() {
+        return new Customers(
+                textName.getText(),
+                textDoB.getText(),
+                textAddress.getText(),
+                textPhoneNumber.getText(),
+                textEmail.getText(),
+                textPaymentInfo.getText(),
+                active.isSelected(),
+                Double.parseDouble(textSalesTaxPercentage.getText()));
     }
 
     private void resetTextFields() {

@@ -1,5 +1,5 @@
 {"customerName":"Jackson Hammy","DoB":{"year":2000,"month":8,"day":5},"address":"235 Sandhills Lane","phoneNum":"345-658-1284","email":"raymondan100@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":0.075}
-{"customerName":"Raymond An","DoB":{"year":1998,"month":11,"day":23},"address":"348 Jane Lane","phoneNum":"234-961-3464","email":"lotsoflollipops@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":0.15}
+{"customerName":"Barry Allan","DoB":{"year":1980,"month":5,"day":12},"address":"237 Allen Road","phoneNum":"234-961-3464","email":"lotsoflollipops@gmail.com","paymentInfo":"Check","active":false,"salesTaxPercentage":0.3}
 {"customerName":"Thomas Jacob","DoB":{"year":1995,"month":5,"day":12},"address":"238 Umbrella Avenue","phoneNum":"234-872-8231","email":"tjacob@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":0.25}
 {"customerName":"John Ruther","DoB":{"year":1995,"month":4,"day":23},"address":"237 Peak Hill Lane","phoneNum":"325-851-8671","email":"jrtuerh@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":0.05}
 {"customerName":"Kobe James","DoB":{"year":1990,"month":9,"day":12},"address":"9134 Kite Road","phoneNum":"234-967-1283","email":"kobejames@gmail.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":0.03}

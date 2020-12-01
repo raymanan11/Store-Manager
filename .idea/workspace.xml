@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ee60be-62a9-45c8-b30c-cf54d21f52d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Customers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Customers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/AddCustomersScren.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/AddCustomersScren.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/AddCustomersScren.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/AddCustomersScren.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,14 +18,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.54479164">
+    <splitter split-orientation="horizontal" split-proportion="0.49895832">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Customers.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="7" column="218" selection-start-line="7" selection-start-column="218" selection-end-line="7" selection-end-column="218" />
+                <state relative-caret-position="144">
+                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
                 </state>
               </provider>
             </entry>
@@ -30,7 +33,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/Customers.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
+                <state relative-caret-position="-157">
                   <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
                 </state>
               </provider>
@@ -44,7 +47,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/AddProductsScreen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-386">
+                <state relative-caret-position="-18">
                   <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -78,8 +81,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="124">
-                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+                <state relative-caret-position="616">
+                  <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -108,8 +111,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/AddCustomersScren.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="362">
-                  <caret line="98" column="145" lean-forward="true" selection-start-line="98" selection-start-column="145" selection-end-line="98" selection-end-column="145" />
+                <state relative-caret-position="449">
+                  <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -166,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/MainScreen.form" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/AddCustomers.form" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/CustomerFileWriter.java" />
-        <option value="$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/Customers.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/Products.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/ErrorMessage.form" />
@@ -179,6 +181,8 @@
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/Message.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/AddProductsScreen.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" />
+        <option value="$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java" />
+        <option value="$PROJECT_DIR$/src/JavaSwingGUI/AddCustomersScren.form" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/AddCustomersScren.java" />
         <option value="$PROJECT_DIR$/Customers.txt" />
       </list>
@@ -291,7 +295,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3297769" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297769" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3439681" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23629113" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -417,16 +421,6 @@
     <entry file="file://$PROJECT_DIR$/Products.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/AddProductsScreen.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
@@ -437,16 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/AddProductsScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-386">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -473,10 +457,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/AddProductsScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/AddCustomersScren.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="98" column="145" lean-forward="true" selection-start-line="98" selection-start-column="145" selection-end-line="98" selection-end-column="145" />
+        <state relative-caret-position="449">
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -485,7 +489,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/Customers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
+        <state relative-caret-position="-157">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
@@ -495,8 +499,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Customers.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="218" selection-start-line="7" selection-start-column="218" selection-end-line="7" selection-end-column="218" />
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

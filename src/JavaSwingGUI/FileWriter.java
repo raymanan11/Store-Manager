@@ -36,4 +36,19 @@ public class FileWriter {
         }
     }
 
+    public void writeFile(ArrayList<String> updatedList, String fileName) {
+        try {
+            java.io.FileWriter file = new java.io.FileWriter(fileName, false);
+            BufferedWriter out = new BufferedWriter(file);
+            for (String objectJSON : updatedList) {
+                out.write(objectJSON);
+                out.newLine();
+            }
+            out.close();
+        }
+        catch (IOException e) {
+            System.out.println("Wrong file name!");
+        }
+    }
+
 }
