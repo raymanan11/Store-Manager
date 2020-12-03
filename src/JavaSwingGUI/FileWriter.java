@@ -3,9 +3,7 @@ package JavaSwingGUI;
 import com.google.gson.Gson;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class FileWriter {
 
@@ -31,6 +29,8 @@ public class FileWriter {
             ArrayList<String> productInfo;
             Scanner file = new Scanner(new File(fileName));
             Gson gson = new Gson();
+            ArrayList<Double> profitPercent = new ArrayList<>();
+            Map<Double, ArrayList<String>> orderedProfit = new HashMap<>();
             while (file.hasNextLine()) {
                 productInfo = new ArrayList<>();
                 Products product = gson.fromJson(file.nextLine(), Products.class);
@@ -43,7 +43,13 @@ public class FileWriter {
                 productInfo.add(String.valueOf(product.getTotalCost()));
                 productInfo.add(String.valueOf(product.getProfit()));
                 productInfo.add(String.format("%.2f", product.getProfitPercent()));
-                resultSet.add(productInfo);
+                profitPercent.add(product.getProfitPercent());
+                orderedProfit.put(product.getProfitPercent(), productInfo);
+//                resultSet.add(productInfo);
+            }
+            Collections.sort(profitPercent);
+            for (int i = 0; i < profitPercent.size(); i++) {
+                resultSet.add(orderedProfit.get(profitPercent.get(profitPercent.size() - 1 - i)));
             }
             file.close();
             return resultSet;
