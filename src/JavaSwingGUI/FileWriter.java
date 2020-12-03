@@ -33,19 +33,9 @@ public class FileWriter {
             Map<Double, ArrayList<String>> orderedProfit = new HashMap<>();
             while (file.hasNextLine()) {
                 productInfo = new ArrayList<>();
-                Products product = gson.fromJson(file.nextLine(), Products.class);
-                productInfo.add(product.getProductName());
-                productInfo.add(String.valueOf(product.getRetailPrice()));
-                productInfo.add(String.valueOf(product.getCostPrice()));
-                productInfo.add(String.valueOf(product.getQuantityOnHand()));
-                productInfo.add(String.valueOf(product.getQuantitySold()));
-                productInfo.add(String.valueOf(product.getTotalSales()));
-                productInfo.add(String.valueOf(product.getTotalCost()));
-                productInfo.add(String.valueOf(product.getProfit()));
-                productInfo.add(String.format("%.2f", product.getProfitPercent()));
+                Products product = getProducts(productInfo, file, gson);
                 profitPercent.add(product.getProfitPercent());
                 orderedProfit.put(product.getProfitPercent(), productInfo);
-//                resultSet.add(productInfo);
             }
             Collections.sort(profitPercent);
             for (int i = 0; i < profitPercent.size(); i++) {
@@ -58,6 +48,20 @@ public class FileWriter {
             System.out.println("Wrong file name!");
         }
         return null;
+    }
+
+    private Products getProducts(ArrayList<String> productInfo, Scanner file, Gson gson) {
+        Products product = gson.fromJson(file.nextLine(), Products.class);
+        productInfo.add(product.getProductName());
+        productInfo.add(String.valueOf(product.getRetailPrice()));
+        productInfo.add(String.valueOf(product.getCostPrice()));
+        productInfo.add(String.valueOf(product.getQuantityOnHand()));
+        productInfo.add(String.valueOf(product.getQuantitySold()));
+        productInfo.add(String.valueOf(product.getTotalSales()));
+        productInfo.add(String.valueOf(product.getTotalCost()));
+        productInfo.add(String.valueOf(product.getProfit()));
+        productInfo.add(String.format("%.2f", product.getProfitPercent()));
+        return product;
     }
 
     public void writeFile(String gson, String fileName) {
