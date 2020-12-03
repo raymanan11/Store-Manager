@@ -6,3 +6,4 @@
 {"productName":"JBL Stereo Pro","costPrice":250.0,"retailPrice":350.0,"quantityOnHand":10,"quantitySold":17,"warehouseNumber":2}
 {"productName":"Apple Homepod Mini","costPrice":250.0,"retailPrice":400.0,"quantityOnHand":12,"quantitySold":20,"warehouseNumber":2}
 {"productName":"Walkman","costPrice":10.0,"retailPrice":15.0,"quantityOnHand":14,"quantitySold":20,"warehouseNumber":1}
+{"productName":"logitech Speaker MAX","costPrice":350.0,"retailPrice":500.0,"quantityOnHand":12,"quantitySold":8,"warehouseNumber":1}

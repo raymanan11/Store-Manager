@@ -63,7 +63,7 @@ public class Products {
     }
 
     public double getProfitPercent() {
-        return (getTotalSales() / getTotalCost()) * 100;
+        return (getProfit() / getTotalCost()) * 100;
     }
 
     public void setProductName(String productName) {

@@ -29,7 +29,8 @@ public class ProductsMenu extends JFrame {
         displayProductsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Displaying Products");
+                DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen();
+                displayProductsScreen.setVisible(true);
             }
         });
     }

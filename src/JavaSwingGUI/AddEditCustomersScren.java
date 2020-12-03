@@ -61,8 +61,6 @@ public class AddEditCustomersScren extends JFrame {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // add to JavaSwingGUI.Customers.txt file
-                // refresh list so name is updated
                 addCustomer(e);
                 refreshList();
                 resetTextFields();

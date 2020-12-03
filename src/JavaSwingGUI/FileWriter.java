@@ -1,5 +1,7 @@
 package JavaSwingGUI;
 
+import com.google.gson.Gson;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +15,35 @@ public class FileWriter {
             Scanner file = new Scanner(new File(fileName));
             while (file.hasNextLine()) {
                 resultSet.add(file.nextLine());
+            }
+            file.close();
+            return resultSet;
+        }
+        catch (IOException e) {
+            System.out.println("Wrong file name!");
+        }
+        return null;
+    }
+
+    public ArrayList<ArrayList<String>> readFromFile(String fileName) {
+        try {
+            ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
+            ArrayList<String> productInfo;
+            Scanner file = new Scanner(new File(fileName));
+            Gson gson = new Gson();
+            while (file.hasNextLine()) {
+                productInfo = new ArrayList<>();
+                Products product = gson.fromJson(file.nextLine(), Products.class);
+                productInfo.add(product.getProductName());
+                productInfo.add(String.valueOf(product.getRetailPrice()));
+                productInfo.add(String.valueOf(product.getCostPrice()));
+                productInfo.add(String.valueOf(product.getQuantityOnHand()));
+                productInfo.add(String.valueOf(product.getQuantitySold()));
+                productInfo.add(String.valueOf(product.getTotalSales()));
+                productInfo.add(String.valueOf(product.getTotalCost()));
+                productInfo.add(String.valueOf(product.getProfit()));
+                productInfo.add(String.format("%.2f", product.getProfitPercent()));
+                resultSet.add(productInfo);
             }
             file.close();
             return resultSet;
