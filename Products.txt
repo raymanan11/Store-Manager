@@ -1,4 +1,4 @@
-{"productName":"Samsung 50\u0027 TV","costPrice":600.0,"retailPrice":800.0,"quantityOnHand":10,"quantitySold":18,"warehouseNumber":2}
+{"productName":"Samsung 50\u0027 TV","costPrice":600.0,"retailPrice":800.0,"quantityOnHand":10,"quantitySold":15,"warehouseNumber":2}
 {"productName":"Apple TV","costPrice":400.0,"retailPrice":600.0,"quantityOnHand":20,"quantitySold":30,"warehouseNumber":1}
 {"productName":"Sony 40\u0027 TV","costPrice":400.0,"retailPrice":600.0,"quantityOnHand":15,"quantitySold":20,"warehouseNumber":2}
 {"productName":"Insignia 43\" TV","costPrice":500.0,"retailPrice":700.0,"quantityOnHand":10,"quantitySold":20,"warehouseNumber":2}
