@@ -1,9 +1,9 @@
 {"productName":"Samsung 50\u0027 TV","costPrice":600.0,"retailPrice":800.0,"quantityOnHand":10,"quantitySold":15,"warehouseNumber":2}
 {"productName":"Apple TV","costPrice":400.0,"retailPrice":600.0,"quantityOnHand":20,"quantitySold":30,"warehouseNumber":1}
-{"productName":"Sony 40\u0027 TV","costPrice":400.0,"retailPrice":600.0,"quantityOnHand":15,"quantitySold":20,"warehouseNumber":2}
-{"productName":"Insignia 43\" TV","costPrice":500.0,"retailPrice":700.0,"quantityOnHand":10,"quantitySold":20,"warehouseNumber":2}
+{"productName":"Sony 40\u0027 TV","costPrice":400.0,"retailPrice":600.0,"quantityOnHand":2,"quantitySold":20,"warehouseNumber":2}
+{"productName":"Insignia 43\" TV","costPrice":500.0,"retailPrice":700.0,"quantityOnHand":3,"quantitySold":20,"warehouseNumber":2}
 {"productName":"Samsung DJ Sound System","costPrice":150.0,"retailPrice":250.0,"quantityOnHand":15,"quantitySold":19,"warehouseNumber":1}
-{"productName":"JBL Stereo Pro","costPrice":250.0,"retailPrice":350.0,"quantityOnHand":10,"quantitySold":17,"warehouseNumber":2}
+{"productName":"JBL Stereo Pro","costPrice":250.0,"retailPrice":350.0,"quantityOnHand":5,"quantitySold":17,"warehouseNumber":2}
 {"productName":"Apple Homepod Mini","costPrice":250.0,"retailPrice":400.0,"quantityOnHand":12,"quantitySold":20,"warehouseNumber":2}
-{"productName":"Walkman","costPrice":10.0,"retailPrice":15.0,"quantityOnHand":14,"quantitySold":20,"warehouseNumber":1}
+{"productName":"Walkman","costPrice":10.0,"retailPrice":15.0,"quantityOnHand":1,"quantitySold":20,"warehouseNumber":1}
 {"productName":"logitech Speaker MAX","costPrice":350.0,"retailPrice":500.0,"quantityOnHand":12,"quantitySold":8,"warehouseNumber":1}

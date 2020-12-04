@@ -58,16 +58,16 @@ public class FileReaderWriter {
             Scanner file = new Scanner(new File(fileName));
             Gson gson = new Gson();
             ArrayList<Double> profitPercent = new ArrayList<>();
-            Map<Double, ArrayList<ArrayList<String>>> orderedProfit = new HashMap<>();
+            Map<Double, ArrayList<ArrayList<String>>> productsMap = new HashMap<>();
             while (file.hasNextLine()) {
                 productInfo = new ArrayList<>();
                 Products product = gson.fromJson(file.nextLine(), Products.class);
                 getProducts(productInfo, product);
-                addProducts(productInfo, profitPercent, orderedProfit, product);
+                addProducts(productInfo, profitPercent, productsMap, product);
             }
             Collections.sort(profitPercent);
             for (int i = 0; i < profitPercent.size(); i++) {
-                resultSet.addAll(orderedProfit.get(profitPercent.get(profitPercent.size() - 1 - i)));
+                resultSet.addAll(productsMap.get(profitPercent.get(profitPercent.size() - 1 - i)));
             }
             file.close();
             return resultSet;
@@ -87,6 +87,47 @@ public class FileReaderWriter {
         }
         else {
             orderedProfit.get(product.getProfitPercent()).add(productInfo);
+        }
+    }
+
+    public ArrayList<ArrayList<String>> getProductsFiveOrLess(String fileName) {
+        try {
+            ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
+            ArrayList<String> productInfo;
+            Scanner file = new Scanner(new File(fileName));
+            Gson gson = new Gson();
+            ArrayList<Integer> quantityOnHand = new ArrayList<>();
+            Map<Integer, ArrayList<ArrayList<String>>> productsMap = new HashMap<>();
+            while (file.hasNextLine()) {
+                productInfo = new ArrayList<>();
+                Products product = gson.fromJson(file.nextLine(), Products.class);
+                getProducts(productInfo, product);
+                addProductsFiveOrLess(productInfo, quantityOnHand, productsMap, product);
+            }
+            Collections.sort(quantityOnHand);
+            for (int numberInInventory : quantityOnHand) {
+                resultSet.addAll(productsMap.get(numberInInventory));
+            }
+            file.close();
+            return resultSet;
+        }
+        catch (IOException e) {
+            System.out.println("Wrong file name!");
+        }
+        return null;
+    }
+
+    private void addProductsFiveOrLess(ArrayList<String> productInfo, ArrayList<Integer> quantityOnHand, Map<Integer, ArrayList<ArrayList<String>>> productsMap, Products product) {
+        if (!quantityOnHand.contains(product.getQuantityOnHand())) {
+            ArrayList<ArrayList<String >> possibleDuplicates = new ArrayList<>();
+            if (product.getQuantityOnHand() <= 5) {
+                possibleDuplicates.add(productInfo);
+                quantityOnHand.add(product.getQuantityOnHand());
+                productsMap.put(product.getQuantityOnHand(), possibleDuplicates);
+            }
+        }
+        else {
+            productsMap.get(product.getQuantityOnHand()).add(productInfo);
         }
     }
 
