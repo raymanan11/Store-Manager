@@ -65,29 +65,6 @@ public class FileWriter {
         }
     }
 
-    // adds the products not in decreasing profit percent
-
-//    public ArrayList<ArrayList<String>> readFromFile(String fileName) {
-//        try {
-//            ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
-//            ArrayList<String> productInfo;
-//            Scanner file = new Scanner(new File(fileName));
-//            Gson gson = new Gson();
-//            while (file.hasNextLine()) {
-//                productInfo = new ArrayList<>();
-//                Products product = gson.fromJson(file.nextLine(), Products.class);
-//                getProducts(productInfo, product);
-//                resultSet.add(productInfo);
-//            }
-//            file.close();
-//            return resultSet;
-//        }
-//        catch (IOException e) {
-//            System.out.println("Wrong file name!");
-//        }
-//        return null;
-//    }
-
     private void getProducts(ArrayList<String> productInfo, Products product) {
         productInfo.add(product.getProductName());
         productInfo.add(String.valueOf(product.getRetailPrice()));
