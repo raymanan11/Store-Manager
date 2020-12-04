@@ -1,9 +1,13 @@
 package JavaSwingGUI;
 
 import javax.swing.*;
+import javax.swing.plaf.basic.BasicSliderUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
 
 public class ProductsMenu extends JFrame {
     private JPanel panelProductsMenu;
@@ -18,6 +22,7 @@ public class ProductsMenu extends JFrame {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
         this.setLocationRelativeTo(null);
+        FileReaderWriter fileReaderWriter = new FileReaderWriter();
 
         addProductsButton.addActionListener(new ActionListener() {
             @Override
@@ -29,7 +34,8 @@ public class ProductsMenu extends JFrame {
         displayProductsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen();
+                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProductsProfitPercentDesc("Products.txt");
+                DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen(productInfo);
                 displayProductsScreen.setVisible(true);
             }
         });

@@ -9,10 +9,11 @@ import java.util.ArrayList;
 public class DisplayProductsScreen extends JFrame {
     private JPanel productsPanel;
     private JTable productsTable;
+    private ArrayList<ArrayList<String>> products;
 
     FileReaderWriter fileReaderWriter;
 
-    public DisplayProductsScreen() {
+    public DisplayProductsScreen(ArrayList<ArrayList<String>> products) {
         super("Display Products");
         fileReaderWriter = new FileReaderWriter();
         setPreferredSize(new Dimension(900, 650));
@@ -20,18 +21,17 @@ public class DisplayProductsScreen extends JFrame {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
         this.setLocationRelativeTo(null);
+        this.products = products;
         createTable();
     }
 
     public void createTable() {
 
-        ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProductsProfitPercentDesc("Products.txt");
-
-        String[][] productData = new String[productInfo.size()][];
+        String[][] productData = new String[products.size()][];
         String[] columnNames = {"Product Name", "Retail Price", "Cost Price", "Quantity On Hand", "Quantity Sold", "Total Sales", "Total Cost", "Total Profit", "Total Profit %"};
 
-        for (int i = 0; i < productInfo.size(); i++) {
-            ArrayList<String> row = productInfo.get(i);
+        for (int i = 0; i < products.size(); i++) {
+            ArrayList<String> row = products.get(i);
             productData[i] = row.toArray(new String[row.size()]);
         }
 
