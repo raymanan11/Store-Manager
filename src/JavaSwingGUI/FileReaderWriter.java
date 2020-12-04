@@ -23,9 +23,6 @@ public class FileReaderWriter {
         return null;
     }
 
-    // gets profit % in decreasing order but if duplicate profit % then shows the same
-    // row twice because of map not allowing duplicates
-
     public void writeFile(String gson, String fileName) {
         try {
             java.io.FileWriter file = new java.io.FileWriter(fileName, true);

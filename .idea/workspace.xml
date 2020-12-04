@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ee60be-62a9-45c8-b30c-cf54d21f52d9" name="Default Changelist" comment="" />
+    <list default="true" id="22ee60be-62a9-45c8-b30c-cf54d21f52d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,10 +76,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java">
+            <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1170">
-                  <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+                <state relative-caret-position="414">
+                  <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -170,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/Products.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.form" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java" />
+        <option value="$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java" />
       </list>
     </option>
   </component>
@@ -271,6 +274,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-942" y="-1052" width="1920" height="1052" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.159375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -281,7 +285,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297769" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2532403" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13160518" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -492,10 +496,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+        <state relative-caret-position="414">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
