@@ -44,7 +44,9 @@
             <children>
               <component id="d49f0" class="javax.swing.JTable" binding="productsTable">
                 <constraints/>
-                <properties/>
+                <properties>
+                  <enabled value="false"/>
+                </properties>
               </component>
             </children>
           </scrollpane>
