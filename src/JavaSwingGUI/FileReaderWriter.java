@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 import java.io.*;
 import java.util.*;
 
-public class FileWriter {
+public class FileReaderWriter {
 
     public ArrayList<String> readFile(String fileName) {
         try {
@@ -26,7 +26,35 @@ public class FileWriter {
     // gets profit % in decreasing order but if duplicate profit % then shows the same
     // row twice because of map not allowing duplicates
 
-    public ArrayList<ArrayList<String>> readFromFile(String fileName) {
+    public void writeFile(String gson, String fileName) {
+        try {
+            java.io.FileWriter file = new java.io.FileWriter(fileName, true);
+            BufferedWriter out = new BufferedWriter(file);
+            out.write(gson);
+            out.newLine();
+            out.close();
+        }
+        catch (IOException e) {
+            System.out.println("Wrong file name!");
+        }
+    }
+
+    public void writeFile(ArrayList<String> updatedList, String fileName) {
+        try {
+            java.io.FileWriter file = new java.io.FileWriter(fileName, false);
+            BufferedWriter out = new BufferedWriter(file);
+            for (String objectJSON : updatedList) {
+                out.write(objectJSON);
+                out.newLine();
+            }
+            out.close();
+        }
+        catch (IOException e) {
+            System.out.println("Wrong file name!");
+        }
+    }
+
+    public ArrayList<ArrayList<String>> getProductsProfitPercentDesc(String fileName) {
         try {
             ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
             ArrayList<String> productInfo;
@@ -75,34 +103,6 @@ public class FileWriter {
         productInfo.add(String.valueOf(product.getTotalCost()));
         productInfo.add(String.valueOf(product.getProfit()));
         productInfo.add(String.format("%.2f", product.getProfitPercent()));
-    }
-
-    public void writeFile(String gson, String fileName) {
-        try {
-            java.io.FileWriter file = new java.io.FileWriter(fileName, true);
-            BufferedWriter out = new BufferedWriter(file);
-            out.write(gson);
-            out.newLine();
-            out.close();
-        }
-        catch (IOException e) {
-            System.out.println("Wrong file name!");
-        }
-    }
-
-    public void writeFile(ArrayList<String> updatedList, String fileName) {
-        try {
-            java.io.FileWriter file = new java.io.FileWriter(fileName, false);
-            BufferedWriter out = new BufferedWriter(file);
-            for (String objectJSON : updatedList) {
-                out.write(objectJSON);
-                out.newLine();
-            }
-            out.close();
-        }
-        catch (IOException e) {
-            System.out.println("Wrong file name!");
-        }
     }
 
 }

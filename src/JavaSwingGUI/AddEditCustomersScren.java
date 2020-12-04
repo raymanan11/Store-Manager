@@ -34,7 +34,7 @@ public class AddEditCustomersScren extends JFrame {
 
     private Gson gson;
     private ArrayList<String> jsonResults;
-    private FileWriter fileWriter;
+    private FileReaderWriter fileReaderWriter;
     private Message messageWindow;
 
     public AddEditCustomersScren() {
@@ -53,7 +53,7 @@ public class AddEditCustomersScren extends JFrame {
 
         gson = new Gson();
         jsonResults = new ArrayList<>();
-        fileWriter = new FileWriter();
+        fileReaderWriter = new FileReaderWriter();
         messageWindow = new Message();
 
         refreshList();
@@ -99,7 +99,7 @@ public class AddEditCustomersScren extends JFrame {
 
             String json = gson.toJson(customer);
 
-            fileWriter.writeFile(json, "Customers.txt");
+            fileReaderWriter.writeFile(json, "Customers.txt");
 
             updateButton.setEnabled(false);
 
@@ -122,7 +122,7 @@ public class AddEditCustomersScren extends JFrame {
             String jsonUpdatedResult = gson.toJson(customer);
             jsonResults.remove(customerNumber);
             jsonResults.add(customerNumber, jsonUpdatedResult);
-            fileWriter.writeFile(jsonResults, "Customers.txt");
+            fileReaderWriter.writeFile(jsonResults, "Customers.txt");
 
             messageWindow.showWindow("Updated Customer!");
         }
@@ -175,7 +175,7 @@ public class AddEditCustomersScren extends JFrame {
     }
 
     public void refreshList() {
-        jsonResults = fileWriter.readFile("Customers.txt");
+        jsonResults = fileReaderWriter.readFile("Customers.txt");
         listCustomersModel.removeAllElements();
         for (String customerJSON : jsonResults) {
             Customers customer = gson.fromJson(customerJSON, Customers.class);

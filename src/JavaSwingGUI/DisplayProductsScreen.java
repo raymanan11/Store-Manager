@@ -10,11 +10,11 @@ public class DisplayProductsScreen extends JFrame {
     private JPanel productsPanel;
     private JTable productsTable;
 
-    FileWriter fileWriter;
+    FileReaderWriter fileReaderWriter;
 
     public DisplayProductsScreen() {
         super("Display Products");
-        fileWriter = new FileWriter();
+        fileReaderWriter = new FileReaderWriter();
         setPreferredSize(new Dimension(900, 650));
         this.setContentPane(this.productsPanel);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -25,7 +25,7 @@ public class DisplayProductsScreen extends JFrame {
 
     public void createTable() {
 
-        ArrayList<ArrayList<String>> productInfo = fileWriter.readFromFile("Products.txt");
+        ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProductsProfitPercentDesc("Products.txt");
 
         String[][] productData = new String[productInfo.size()][];
         String[] columnNames = {"Product Name", "Retail Price", "Cost Price", "Quantity On Hand", "Quantity Sold", "Total Sales", "Total Cost", "Total Profit", "Total Profit %"};

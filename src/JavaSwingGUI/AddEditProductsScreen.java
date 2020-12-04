@@ -26,7 +26,7 @@ public class AddEditProductsScreen extends JFrame {
 
     private Gson gson;
     private ArrayList<String> jsonResults;
-    private FileWriter fileWriter;
+    private FileReaderWriter fileReaderWriter;
     private Message messageWindow;
 
     public AddEditProductsScreen() {
@@ -45,7 +45,7 @@ public class AddEditProductsScreen extends JFrame {
 
         gson = new Gson();
         jsonResults = new ArrayList<>();
-        fileWriter = new FileWriter();
+        fileReaderWriter = new FileReaderWriter();
         messageWindow = new Message();
 
         refreshList();
@@ -78,7 +78,7 @@ public class AddEditProductsScreen extends JFrame {
 
     public void addProducts(ActionEvent e) {
         try {
-            ArrayList<String> numberOfWarehouses = fileWriter.readFile("NumberOfWarehouses.txt");
+            ArrayList<String> numberOfWarehouses = fileReaderWriter.readFile("NumberOfWarehouses.txt");
             int numWarehouses = Integer.parseInt(numberOfWarehouses.get(0));
 
             int inputWarehouse = Integer.parseInt(textWarehouseNumber.getText().trim());
@@ -95,7 +95,7 @@ public class AddEditProductsScreen extends JFrame {
 
                 String json = gson.toJson(products);
 
-                fileWriter.writeFile(json, "Products.txt");
+                fileReaderWriter.writeFile(json, "Products.txt");
 
                 messageWindow.showWindow("Added Product!");
             }
@@ -118,7 +118,7 @@ public class AddEditProductsScreen extends JFrame {
             String jsonUpdatedResult = gson.toJson(products);
             jsonResults.remove(customerNumber);
             jsonResults.add(customerNumber, jsonUpdatedResult);
-            fileWriter.writeFile(jsonResults, "Products.txt");
+            fileReaderWriter.writeFile(jsonResults, "Products.txt");
 
             messageWindow.showWindow("Updated Product!");
         }
@@ -163,7 +163,7 @@ public class AddEditProductsScreen extends JFrame {
     }
 
     public void refreshList() {
-        jsonResults = fileWriter.readFile("Products.txt");
+        jsonResults = fileReaderWriter.readFile("Products.txt");
         listProductsModel.removeAllElements();
         for (String productsJSON : jsonResults) {
             Products product = gson.fromJson(productsJSON, Products.class);
