@@ -7,8 +7,6 @@
       <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,32 +224,22 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectId" id="1kU7hSgnFqSlsBpggl3LZmnkvyb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="385" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="358" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gson-2.8.6.jar" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -270,7 +258,7 @@
   <component name="SQLPlugin.ProjectConfiguration">
     <queries />
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -345,7 +333,7 @@
     </layout-to-restore>
   </component>
   <component name="WindowStateProjectService">
-    <state x="565" y="332" key="FileChooserDialogImpl" timestamp="1605743507278">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1607143121054">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="565" y="332" key="FileChooserDialogImpl/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605743507278" />
@@ -587,5 +575,57 @@
         </settings>
       </state>
     </states>
+    <state x="440" y="94" key="#Project_Structure/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607143121054" />
+    <state x="149" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607148504823">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="149" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607148504823" />
+    <state x="565" y="332" key="FileChooserDialogImpl" timestamp="1607143544705">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="565" y="332" key="FileChooserDialogImpl/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607143544705" />
+    <state width="915" height="281" key="GridCell.Tab.0.bottom" timestamp="1607160165987">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="915" height="281" key="GridCell.Tab.0.bottom/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160165987" />
+    <state width="915" height="281" key="GridCell.Tab.0.center" timestamp="1607160165987">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="915" height="281" key="GridCell.Tab.0.center/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160165987" />
+    <state width="915" height="281" key="GridCell.Tab.0.left" timestamp="1607160165987">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="915" height="281" key="GridCell.Tab.0.left/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160165987" />
+    <state width="915" height="281" key="GridCell.Tab.0.right" timestamp="1607160165987">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="915" height="281" key="GridCell.Tab.0.right/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160165987" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1607143549108">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607143549108" />
+    <state x="1980" y="-21" width="1563" height="656" maximized="true" key="dock-window-1" timestamp="1607149840394">
+      <screen x="1920" y="-8" width="1920" height="1040" />
+    </state>
+    <state x="1980" y="-21" width="1563" height="656" maximized="true" key="dock-window-1/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607149840394" />
+    <state x="1874" y="-15" width="1563" height="717" maximized="true" key="dock-window-2" timestamp="1607152735215">
+      <screen x="1920" y="-8" width="1920" height="1040" />
+    </state>
+    <state x="1874" y="-15" width="1563" height="717" maximized="true" key="dock-window-2/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607152735215" />
+    <state x="954" y="0" width="973" height="1047" key="dock-window-3" timestamp="1607160148651">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="954" y="0" width="973" height="1047" key="dock-window-3/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160148651" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/JavaSwingGUI/Customers.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
