@@ -142,11 +142,11 @@ public class AddEditEmployeeScreen extends JFrame{
                 textName.getText(),
                 textDoB.getText(),
                 textAddress.getText(),
-                textPhoneNumber.getText(),
                 textEmail.getText(),
+                textSSID.getText(),
+                textPhoneNumber.getText(),
                 textMethodOfPayment.getText(),
                 textTotalSales.getText(),
-                textSSID.getText(),
                 Double.parseDouble(textCommisionPercentage.getText()));
     }
 
@@ -175,7 +175,7 @@ public class AddEditEmployeeScreen extends JFrame{
             textCommisionPercentage.setText(String.valueOf(employee.getEmployeeCommissionPercentage()));
             textSSID.setText(employee.getEmployeeSSID());
             textMethodOfPayment.setText(employee.getEmployeeMethodOfPayment());
-            textTotalSales.setText(employee.getEmployeeMethodOfPayment());
+            textTotalSales.setText(employee.getEmployeeTotalSales());
 
         }
     }
