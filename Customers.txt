@@ -7,3 +7,4 @@
 {"customerName":"Leviathon Handlebar","DoB":{"year":1990,"month":6,"day":23},"address":"6789 Peachtree Road","phoneNum":"453-7526-7524","email":"leviathon@gmail.com","paymentInfo":"Check","active":false,"salesTaxPercentage":0.15}
 {"customerName":"Kin Ly","DoB":{"year":1969,"month":9,"day":22},"address":"841 Lakeview Lane","phoneNum":"234-962-8452","email":"kinanly@yahoo.com","paymentInfo":"Direct Deposit","active":true,"salesTaxPercentage":3.0}
 {"customerName":"John Ruther","DoB":{"year":1995,"month":4,"day":23},"address":"237 Peak Hill Lane","phoneNum":"325-851-8671","email":"jrtuerh@gmail.com","paymentInfo":"Check","active":true,"salesTaxPercentage":5.0}
+{"customerName":"Ali Mourad","DoB":{"year":2000,"month":7,"day":13},"address":"123 CandyCane LN","phoneNum":"(555)555-5555","email":"fakeemail@fakeemail.com","paymentInfo":"Credit","active":false,"salesTaxPercentage":1.17}

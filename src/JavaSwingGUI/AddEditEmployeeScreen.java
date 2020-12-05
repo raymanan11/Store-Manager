@@ -92,16 +92,16 @@ public class AddEditEmployeeScreen extends JFrame{
                     textName.getText(),
                     textDoB.getText(),
                     textAddress.getText(),
-                    textPhoneNumber.getText(),
                     textEmail.getText(),
+                    textSSID.getText(),
+                    textPhoneNumber.getText(),
                     textMethodOfPayment.getText(),
                     textTotalSales.getText(),
-                    textSSID.getText(),
                     Double.parseDouble(textCommisionPercentage.getText()));
 
             String json = gson.toJson(employee);
 
-            fileReaderWriter.writeFile(json, "Employee.txt");
+            fileReaderWriter.writeFile(json, "Employees.txt");
 
             updateButton.setEnabled(false);
 
