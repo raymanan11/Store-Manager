@@ -1,42 +1,45 @@
 package JavaSwingGUI;
 
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Employee {
 
-    private String employeeFirstName;
-    private String employeeLastName;
-    private Date employeeDoB;
+    private String employeeName;
+    private LocalDate employeeDoB;
     private String employeeAddress;
     private String employeeEmail;
     private String employeeSSID;
     private String employeePhoneNumber;
     private String employeeMethodOfPayment;
+    private String employeeTotalSales;
     private double employeeCommissionPercentage;
 
     public Employee() {
-        employeeFirstName = "";
-        employeeLastName = "";
-        employeeDoB = new Date();
+        employeeName = "";
+        employeeDoB = null;
         employeeAddress = "";
         employeeEmail = "";
         employeeSSID = "";
         employeePhoneNumber = "";
         employeeMethodOfPayment = "";
+        employeeTotalSales = "";
         employeeCommissionPercentage = 0;
     }
 
-    public Employee(String employeeFirstName, String employeeLastName, Date employeeDoB,
+    public Employee(String employeeName, String employeeDoB,
                     String employeeAddress, String employeeEmail, String employeeSSID, String employeePhoneNumber,
-                    String employeeMethodOfPayment, double employeeCommissionPercentage) {
-        this.employeeFirstName = employeeFirstName;
-        this.employeeLastName = employeeLastName;
-        this.employeeDoB = employeeDoB;
+                    String employeeMethodOfPayment, String employeeTotalSales, double employeeCommissionPercentage) {
+        this.employeeName = employeeName;
+        setDateOfBirth(employeeDoB);
         this.employeeAddress = employeeAddress;
         this.employeeEmail = employeeEmail;
         this.employeeSSID = employeeSSID;
         this.employeePhoneNumber = employeePhoneNumber;
         this.employeeMethodOfPayment = employeeMethodOfPayment;
+        this.employeeTotalSales = employeeTotalSales;
         this.employeeCommissionPercentage = employeeCommissionPercentage;
     }
 
@@ -44,15 +47,11 @@ public class Employee {
         return this;
     }
 
-    public String getEmployeeFirstname() {
-        return employeeFirstName;
+    public String getEmployeeName() {
+        return employeeName;
     }
 
-    public String getEmployeeLastname() {
-        return employeeLastName;
-    }
-
-    public Date getEmployeeDoB() {
+    public LocalDate getEmployeeDoB() {
         return employeeDoB;
     }
 
@@ -72,6 +71,10 @@ public class Employee {
         return employeePhoneNumber;
     }
 
+    public String getEmployeeTotalSales() {
+        return employeeTotalSales;
+    }
+
     public double getEmployeeCommissionPercentage() {
         return employeeCommissionPercentage;
     }
@@ -80,12 +83,8 @@ public class Employee {
         return employeeMethodOfPayment;
     }
 
-    public void setEmployeeFirstName(String employeeFirstName) {
-        this.employeeFirstName = employeeFirstName;
-    }
-
-    public void setEmployeeLastName(String employeeLastName) {
-        this.employeeLastName = employeeLastName;
+    public void setEmployeeName(String employeeFirstName) {
+        this.employeeName = employeeFirstName;
     }
 
     public void setEmployeeDoB(Date employeeDoB) {
@@ -112,21 +111,29 @@ public class Employee {
         this.employeeCommissionPercentage = employeeCommissionPercentage;
     }
 
+    public void setEmployeeTotalSales(String employeeTotalSales) {
+        this.employeeTotalSales = employeeTotalSales;
+    }
+
     public void setEmployeeMethodOfPayment(String employeeMethodOfPayment) {
         this.employeeMethodOfPayment = employeeMethodOfPayment;
     }
 
-    public void setEmployee(String employeeFirstName, String employeeLastName, Date employeeDoB,
+    public void setDateOfBirth(String dateOfBirth) {
+        this.employeeDoB = LocalDate.parse(dateOfBirth,DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+    }
+
+    public void setEmployee(String employeeName, String employeeDoB,
                     String employeeAddress, String employeeEmail, String employeeSSID, String employeePhoneNumber,
-                    String employeeMethodOfPayment, double employeeCommissionPercentage) {
-        this.employeeFirstName = employeeFirstName;
-        this.employeeLastName = employeeLastName;
-        this.employeeDoB = employeeDoB;
+                    String employeeMethodOfPayment, String employeeTotalSales, double employeeCommissionPercentage) {
+        this.employeeName = employeeName;
+        setDateOfBirth(employeeDoB);
         this.employeeAddress = employeeAddress;
         this.employeeEmail = employeeEmail;
         this.employeeSSID = employeeSSID;
         this.employeePhoneNumber = employeePhoneNumber;
         this.employeeMethodOfPayment = employeeMethodOfPayment;
+        this.employeeTotalSales = employeeTotalSales;
         this.employeeCommissionPercentage = employeeCommissionPercentage;
     }
 

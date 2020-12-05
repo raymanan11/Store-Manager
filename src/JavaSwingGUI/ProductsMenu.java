@@ -15,7 +15,7 @@ public class ProductsMenu extends JFrame {
     public ProductsMenu() {
 
         super("Products Menu");
-        setPreferredSize(new Dimension(500, 350));
+        setPreferredSize(new Dimension(750, 350));
         this.setContentPane(this.panelProductsMenu);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
