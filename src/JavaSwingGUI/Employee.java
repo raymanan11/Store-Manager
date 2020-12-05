@@ -87,7 +87,7 @@ public class Employee {
         this.employeeName = employeeFirstName;
     }
 
-    public void setEmployeeDoB(Date employeeDoB) {
+    public void setEmployeeDoB(LocalDate employeeDoB) {
         this.employeeDoB = employeeDoB;
     }
 
