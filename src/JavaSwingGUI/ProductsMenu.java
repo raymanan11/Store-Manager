@@ -11,6 +11,7 @@ public class ProductsMenu extends JFrame {
     private JButton addProductsButton;
     private JButton displayProductsProfitPercentButton;
     private JButton displayProducts5OrLessButton;
+    private JButton editNumberOfWarehousesButton;
 
     public ProductsMenu() {
 
@@ -44,6 +45,15 @@ public class ProductsMenu extends JFrame {
                 ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProductsFiveOrLess("Products.txt");
                 DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen(productInfo);
                 displayProductsScreen.setVisible(true);
+            }
+        });
+
+
+        editNumberOfWarehousesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EditNumberOfWarehousesScreen editNumberOfWarehousesScreen = new EditNumberOfWarehousesScreen();
+                editNumberOfWarehousesScreen.setVisible(true);
             }
         });
     }

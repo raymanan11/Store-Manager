@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ee60be-62a9-45c8-b30c-cf54d21f52d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_61.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Products.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Store-Manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,18 +19,9 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45758513">
+    <splitter split-orientation="horizontal" split-proportion="0.23445274">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Customers.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="8" selection-start-line="8" selection-end-line="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/Customers.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -40,8 +34,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+                <state relative-caret-position="577">
+                  <caret line="55" column="60" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -49,11 +43,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+                <state relative-caret-position="450">
+                  <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -61,7 +55,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
+                <state relative-caret-position="188">
                   <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -70,14 +64,13 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Products.txt">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form">
-              <provider selected="true" editor-type-id="ui-designer" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="162">
+                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -88,11 +81,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2250">
-                  <caret line="125" column="81" selection-start-line="125" selection-start-column="81" selection-end-line="125" selection-end-column="81" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="-139">
+                  <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/AddEditEmployeeScreen.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-342">
+                  <caret line="47" column="41" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="47" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -113,7 +112,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="720">
@@ -132,6 +131,25 @@
                   <caret line="67" selection-start-line="67" selection-end-line="67" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form">
+              <provider selected="true" editor-type-id="ui-designer" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/EditNumberOfWarehousesScreen.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="126">
+                  <caret line="22" selection-start-line="22" selection-end-line="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/EditNumberOfWarehousesScreen.form">
+              <provider selected="true" editor-type-id="ui-designer" />
             </entry>
           </file>
         </leaf>
@@ -179,10 +197,13 @@
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/Products.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.form" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/FileWriter.java" />
-        <option value="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java" />
-        <option value="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java" />
+        <option value="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form" />
+        <option value="$PROJECT_DIR$/src/JavaSwingGUI/EditNumberOfWarehousesScreen.java" />
+        <option value="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" />
+        <option value="$PROJECT_DIR$/src/JavaSwingGUI/EditNumberOfWarehousesScreen.form" />
+        <option value="$PROJECT_DIR$/Products.txt" />
       </list>
     </option>
   </component>
@@ -218,28 +239,46 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="JavaSwingGUI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Store Manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Store-Manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaSwingGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="EditNumberOfWarehousesScreen" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
     </panes>
   </component>
-  <component name="ProjectId" id="1kU7hSgnFqSlsBpggl3LZmnkvyb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="358" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gson-2.8.6.jar" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -258,7 +297,7 @@
   <component name="SQLPlugin.ProjectConfiguration">
     <queries />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -276,7 +315,7 @@
     <frame x="-948" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15885417" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16197917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -285,7 +324,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297769" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41252485" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21726479" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -337,6 +376,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="565" y="332" key="FileChooserDialogImpl/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605743507278" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/JavaSwingGUI/Customers.java</url>
+          <line>127</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -440,34 +491,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Products.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.form">
       <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="125" column="81" selection-start-line="125" selection-start-column="81" selection-end-line="125" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/AddEditCustomersScren.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -488,18 +513,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="450">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/AddEditEmployeeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="47" column="41" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="47" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/EditNumberOfWarehousesScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="188">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/EditNumberOfWarehousesScreen.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="55" column="60" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Products.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -564,7 +633,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>gson-2.8.6</last-edited>
+          <last-edited>gson-2.8.61</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -575,57 +644,5 @@
         </settings>
       </state>
     </states>
-    <state x="440" y="94" key="#Project_Structure/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607143121054" />
-    <state x="149" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607148504823">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="149" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607148504823" />
-    <state x="565" y="332" key="FileChooserDialogImpl" timestamp="1607143544705">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="565" y="332" key="FileChooserDialogImpl/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607143544705" />
-    <state width="915" height="281" key="GridCell.Tab.0.bottom" timestamp="1607160165987">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="915" height="281" key="GridCell.Tab.0.bottom/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160165987" />
-    <state width="915" height="281" key="GridCell.Tab.0.center" timestamp="1607160165987">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="915" height="281" key="GridCell.Tab.0.center/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160165987" />
-    <state width="915" height="281" key="GridCell.Tab.0.left" timestamp="1607160165987">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="915" height="281" key="GridCell.Tab.0.left/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160165987" />
-    <state width="915" height="281" key="GridCell.Tab.0.right" timestamp="1607160165987">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="915" height="281" key="GridCell.Tab.0.right/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160165987" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1607143549108">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="SettingsEditor/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607143549108" />
-    <state x="1980" y="-21" width="1563" height="656" maximized="true" key="dock-window-1" timestamp="1607149840394">
-      <screen x="1920" y="-8" width="1920" height="1040" />
-    </state>
-    <state x="1980" y="-21" width="1563" height="656" maximized="true" key="dock-window-1/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607149840394" />
-    <state x="1874" y="-15" width="1563" height="717" maximized="true" key="dock-window-2" timestamp="1607152735215">
-      <screen x="1920" y="-8" width="1920" height="1040" />
-    </state>
-    <state x="1874" y="-15" width="1563" height="717" maximized="true" key="dock-window-2/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607152735215" />
-    <state x="954" y="0" width="973" height="1047" key="dock-window-3" timestamp="1607160148651">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="954" y="0" width="973" height="1047" key="dock-window-3/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160148651" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/JavaSwingGUI/Customers.java</url>
-          <line>127</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
