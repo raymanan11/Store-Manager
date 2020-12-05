@@ -43,4 +43,5 @@ public class DisplayProductsScreen extends JFrame {
         TableColumnModel columns = productsTable.getColumnModel();
         columns.getColumn(0).setMinWidth(150);
     }
+
 }
