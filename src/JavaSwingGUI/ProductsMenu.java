@@ -33,7 +33,7 @@ public class ProductsMenu extends JFrame {
         displayProductsProfitPercentButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProductsProfitPercentDesc("Products.txt");
+                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProducts("Products.txt", true, false, false);
                 DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen(productInfo);
                 displayProductsScreen.setVisible(true);
             }
@@ -42,7 +42,7 @@ public class ProductsMenu extends JFrame {
         displayProducts5OrLessButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProductsFiveOrLess("Products.txt");
+                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProducts("Products.txt", false, true, false);
                 DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen(productInfo);
                 displayProductsScreen.setVisible(true);
             }

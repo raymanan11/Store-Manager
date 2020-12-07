@@ -51,24 +51,25 @@ public class FileReaderWriter {
         }
     }
 
-    public ArrayList<ArrayList<String>> getProductsProfitPercentDesc(String fileName) {
+    public ArrayList<ArrayList<String>> getProducts(String fileName, boolean desc, boolean fiveOrLess, boolean warehouse) {
         try {
             ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
             ArrayList<String> productInfo;
             Scanner file = new Scanner(new File(fileName));
             Gson gson = new Gson();
-            ArrayList<Double> profitPercent = new ArrayList<>();
+            ArrayList<Double> key = new ArrayList<>();
             Map<Double, ArrayList<ArrayList<String>>> productsMap = new HashMap<>();
             while (file.hasNextLine()) {
                 productInfo = new ArrayList<>();
                 Products product = gson.fromJson(file.nextLine(), Products.class);
+                // add values from products class into products arraylist
                 getProducts(productInfo, product);
-                addProducts(productInfo, profitPercent, productsMap, product);
+                if (desc) addProductsDesc(productInfo, key, productsMap, product);
+                else if (fiveOrLess) addProductsFiveOrLess(productInfo, key, productsMap, product);
             }
-            Collections.sort(profitPercent);
-            for (int i = 0; i < profitPercent.size(); i++) {
-                resultSet.addAll(productsMap.get(profitPercent.get(profitPercent.size() - 1 - i)));
-            }
+            Collections.sort(key);
+            if (desc) for (int i = 0; i < key.size(); i++) resultSet.addAll(productsMap.get(key.get(key.size() - 1 - i)));
+            else if (fiveOrLess) for (Double numberInInventory : key) resultSet.addAll(productsMap.get(numberInInventory));
             file.close();
             return resultSet;
         }
@@ -78,7 +79,9 @@ public class FileReaderWriter {
         return null;
     }
 
-    private void addProducts(ArrayList<String> productInfo, ArrayList<Double> profitPercent, Map<Double, ArrayList<ArrayList<String>>> orderedProfit, Products product) {
+    private void addProductsDesc(ArrayList<String> productInfo, ArrayList<Double> profitPercent, Map<Double, ArrayList<ArrayList<String>>> orderedProfit, Products product) {
+        // if profit percent isn't in arraylist,
+        // add the productInfo json string into Arraylist, put that Arraylist into map with key profit percent
         if (!profitPercent.contains(product.getProfitPercent())) {
             ArrayList<ArrayList<String >> possibleDuplicates = new ArrayList<>();
             possibleDuplicates.add(productInfo);
@@ -90,44 +93,17 @@ public class FileReaderWriter {
         }
     }
 
-    public ArrayList<ArrayList<String>> getProductsFiveOrLess(String fileName) {
-        try {
-            ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
-            ArrayList<String> productInfo;
-            Scanner file = new Scanner(new File(fileName));
-            Gson gson = new Gson();
-            ArrayList<Integer> quantityOnHand = new ArrayList<>();
-            Map<Integer, ArrayList<ArrayList<String>>> productsMap = new HashMap<>();
-            while (file.hasNextLine()) {
-                productInfo = new ArrayList<>();
-                Products product = gson.fromJson(file.nextLine(), Products.class);
-                getProducts(productInfo, product);
-                addProductsFiveOrLess(productInfo, quantityOnHand, productsMap, product);
-            }
-            Collections.sort(quantityOnHand);
-            for (int numberInInventory : quantityOnHand) {
-                resultSet.addAll(productsMap.get(numberInInventory));
-            }
-            file.close();
-            return resultSet;
-        }
-        catch (IOException e) {
-            System.out.println("Wrong file name!");
-        }
-        return null;
-    }
-
-    private void addProductsFiveOrLess(ArrayList<String> productInfo, ArrayList<Integer> quantityOnHand, Map<Integer, ArrayList<ArrayList<String>>> productsMap, Products product) {
-        if (!quantityOnHand.contains(product.getQuantityOnHand())) {
+    private void addProductsFiveOrLess(ArrayList<String> productInfo, ArrayList<Double> quantityOnHand, Map<Double, ArrayList<ArrayList<String>>> productsMap, Products product) {
+        if (!quantityOnHand.contains((double) product.getQuantityOnHand())) {
             ArrayList<ArrayList<String >> possibleDuplicates = new ArrayList<>();
             if (product.getQuantityOnHand() <= 5) {
                 possibleDuplicates.add(productInfo);
-                quantityOnHand.add(product.getQuantityOnHand());
-                productsMap.put(product.getQuantityOnHand(), possibleDuplicates);
+                quantityOnHand.add((double) product.getQuantityOnHand());
+                productsMap.put((double) product.getQuantityOnHand(), possibleDuplicates);
             }
         }
         else {
-            productsMap.get(product.getQuantityOnHand()).add(productInfo);
+            productsMap.get((double) product.getQuantityOnHand()).add(productInfo);
         }
     }
 
