@@ -21,30 +21,30 @@ public class InvoiceMenu extends JFrame{
         this.pack();
         this.setLocationRelativeTo(null);
 
-        createInvoiceClicked.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                CreateInvoiceScreen createInvoiceScreen = new CreateInvoiceScreen();
-                createInvoiceScreen.setVisible(true);
-            }
-        });
-
-        openInvoicesClicked.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                DisplayOpenInvoicesScreen displayOpenInvoicesScreen = new DisplayOpenInvoicesScreen();
-                displayOpenInvoicesScreen.setVisible(true);
-            }
-        });
-
-        closedInvoicesClicked.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                DisplayClosedInvoicesScreen displayClosedInvoicesScreen = new DisplayClosedInvoicesScreen();
-                displayClosedInvoicesScreen.setVisible(true);
-            }
-        });
+//        createInvoiceClicked.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//
+//                CreateInvoiceScreen createInvoiceScreen = new CreateInvoiceScreen();
+//                createInvoiceScreen.setVisible(true);
+//            }
+//        });
+//
+//        openInvoicesClicked.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                DisplayOpenInvoicesScreen displayOpenInvoicesScreen = new DisplayOpenInvoicesScreen();
+//                displayOpenInvoicesScreen.setVisible(true);
+//            }
+//        });
+//
+//        closedInvoicesClicked.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                DisplayClosedInvoicesScreen displayClosedInvoicesScreen = new DisplayClosedInvoicesScreen();
+//                displayClosedInvoicesScreen.setVisible(true);
+//            }
+//        });
 
     }
 }
