@@ -16,7 +16,7 @@ public class DisplayProductsScreen extends JFrame {
     public DisplayProductsScreen(ArrayList<ArrayList<String>> products) {
         super("Display Products");
         fileReaderWriter = new FileReaderWriter();
-        setPreferredSize(new Dimension(900, 650));
+        setPreferredSize(new Dimension(1300, 650));
         this.setContentPane(this.productsPanel);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
@@ -28,7 +28,7 @@ public class DisplayProductsScreen extends JFrame {
     public void createTable() {
 
         String[][] productData = new String[products.size()][];
-        String[] columnNames = {"Product Name", "Retail Price", "Cost Price", "Quantity On Hand", "Quantity Sold", "Total Sales", "Total Cost", "Total Profit", "Total Profit %"};
+        String[] columnNames = {"Product Name", "Retail Price", "Cost Price", "Quantity On Hand", "Quantity Sold", "Total Sales", "Total Cost", "Total Profit", "Total Profit %", "Warehouse Number"};
 
         for (int i = 0; i < products.size(); i++) {
             ArrayList<String> row = products.get(i);

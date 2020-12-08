@@ -55,7 +55,7 @@ public class Products {
     }
 
     public double getTotalCost() {
-        return quantityOnHand * costPrice;
+        return (quantityOnHand + quantitySold) * costPrice;
     }
 
     public double getProfit() {

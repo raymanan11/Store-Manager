@@ -12,11 +12,12 @@ public class ProductsMenu extends JFrame {
     private JButton displayProductsProfitPercentButton;
     private JButton displayProducts5OrLessButton;
     private JButton editNumberOfWarehousesButton;
+    private JButton displayProductsOnHandButton;
 
     public ProductsMenu() {
 
         super("Products Menu");
-        setPreferredSize(new Dimension(750, 350));
+        setPreferredSize(new Dimension(1000, 600));
         this.setContentPane(this.panelProductsMenu);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
@@ -33,7 +34,7 @@ public class ProductsMenu extends JFrame {
         displayProductsProfitPercentButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProductsProfitPercentDesc("Products.txt");
+                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProducts("Products.txt", true, false, false);
                 DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen(productInfo);
                 displayProductsScreen.setVisible(true);
             }
@@ -42,12 +43,20 @@ public class ProductsMenu extends JFrame {
         displayProducts5OrLessButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProductsFiveOrLess("Products.txt");
+                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProducts("Products.txt", false, true, false);
                 DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen(productInfo);
                 displayProductsScreen.setVisible(true);
             }
         });
 
+        displayProductsOnHandButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProducts("Products.txt", false, false, true);
+                DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen(productInfo);
+                displayProductsScreen.setVisible(true);
+            }
+        });
 
         editNumberOfWarehousesButton.addActionListener(new ActionListener() {
             @Override
@@ -56,5 +65,6 @@ public class ProductsMenu extends JFrame {
                 editNumberOfWarehousesScreen.setVisible(true);
             }
         });
+
     }
 }
