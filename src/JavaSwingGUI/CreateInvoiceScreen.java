@@ -21,15 +21,15 @@ public class CreateInvoiceScreen extends JFrame{
     private JTextField textEmployeeName;
     private JTextField textTotalCost;
     private JTextField textInitialDate;
-    private JTextField textPaymentInfo;
+    private JTextField textAmountPaid;
     private JTextField textSalesTaxPercentage;
     private JCheckBox active;
     private JCheckBox delivery;
     private JTextField quantityOfProduct;
-    private JButton addProductButton;
     private JPanel addProductPanel;
-    private JButton createInvoiceButton;
+    private JButton updateInvoiceButton;
     private JPanel buttonPanel;
+    private JButton createInvoiceButton;
     private DefaultListModel listProductsModel;
 
     private Gson gson;

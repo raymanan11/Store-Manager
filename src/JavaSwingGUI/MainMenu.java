@@ -50,7 +50,8 @@ public class MainMenu extends JFrame {
         invoicesClicked.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Showing Invoices Window");
+                InvoiceMenu invoiceMenu = new InvoiceMenu();
+                invoiceMenu.setVisible(true);
             }
         });
 

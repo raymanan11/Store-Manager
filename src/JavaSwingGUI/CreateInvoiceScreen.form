@@ -120,7 +120,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <enabled value="false"/>
+            </properties>
           </component>
           <component id="b00c9" class="javax.swing.JTextField" binding="textInitialDate">
             <constraints>
@@ -169,10 +171,10 @@
               <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Payment Info"/>
+              <text value="Amount paid"/>
             </properties>
           </component>
-          <component id="24ec8" class="javax.swing.JTextField" binding="textPaymentInfo">
+          <component id="24ec8" class="javax.swing.JTextField" binding="textAmountPaid">
             <constraints>
               <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -217,10 +219,10 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="9f04" class="javax.swing.JButton" binding="addProductButton" default-binding="true">
+          <component id="9f04" class="javax.swing.JButton">
             <constraints border-constraint="South"/>
             <properties>
-              <text value="Add Product"/>
+              <text value="Add Product to Invoice"/>
             </properties>
           </component>
         </children>
@@ -232,10 +234,16 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="7ef46" class="javax.swing.JButton" binding="createInvoiceButton" default-binding="true">
+          <component id="7ef46" class="javax.swing.JButton" binding="updateInvoiceButton">
             <constraints border-constraint="South"/>
             <properties>
-              <text value="Create invoice"/>
+              <text value="Update Invoice"/>
+            </properties>
+          </component>
+          <component id="6bc3a" class="javax.swing.JButton" binding="createInvoiceButton">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <text value="Create Invoice"/>
             </properties>
           </component>
         </children>
