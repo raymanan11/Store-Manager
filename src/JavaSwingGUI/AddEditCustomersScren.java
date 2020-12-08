@@ -110,7 +110,8 @@ public class AddEditCustomersScren extends JFrame {
         }
 
         catch (DateTimeParseException excpt) {
-            messageWindow.showWindow("Invalid Date of Birth entry. " + '\n' + "Please format Date of Birth as dd/MM/yyyy (i.e. 08/24/1995), Month between 1-12 and Date corresponds to number of days in respective month.");
+            messageWindow.showWindow("Invalid Date of Birth entry. " + '\n' +
+                    "Please format Date of Birth as dd/MM/yyyy (i.e. 08/24/1995), Month between 1-12 and Date corresponds to number of days in respective month.");
         }
 
     }
