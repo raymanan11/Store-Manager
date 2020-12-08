@@ -35,8 +35,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="339" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../328_Programming_Assignment_5" />
@@ -104,10 +104,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607296304786" />
-    <state x="2012" y="84" width="1736" height="856" key="dock-window-2" timestamp="1607296305236">
+    <state x="1319" y="318" key="UIDesigner.ListEditorDialog" timestamp="1607416305840">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1319" y="318" key="UIDesigner.ListEditorDialog/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607416305840" />
+    <state x="2873" y="-8" width="974" height="1047" key="dock-window-1" timestamp="1607415176644">
       <screen x="1920" y="-8" width="1920" height="1040" />
     </state>
-    <state x="2012" y="84" width="1736" height="856" key="dock-window-2/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607296305236" />
+    <state x="2873" y="-8" width="974" height="1047" key="dock-window-1/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607415176644" />
+    <state x="953" y="0" width="974" height="1047" key="dock-window-2" timestamp="1607418100786">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="953" y="0" width="974" height="1047" key="dock-window-2/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607418100786" />
     <state x="2012" y="84" width="1736" height="856" key="dock-window-3" timestamp="1607296305236">
       <screen x="1920" y="-8" width="1920" height="1040" />
     </state>

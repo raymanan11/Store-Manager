@@ -100,7 +100,8 @@ public class AddEditProductsScreen extends JFrame {
                 messageWindow.showWindow("Added Product!");
             }
             else {
-                messageWindow.showWindow("Invalid warehouse number. Please edit number of warehouses if you want to proceed.");
+                messageWindow.showWindow("Invalid warehouse number. " +
+                        "Please edit number of warehouses if you want to proceed.");
             }
 
 

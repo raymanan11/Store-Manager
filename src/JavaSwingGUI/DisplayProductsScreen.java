@@ -28,7 +28,8 @@ public class DisplayProductsScreen extends JFrame {
     public void createTable() {
 
         String[][] productData = new String[products.size()][];
-        String[] columnNames = {"Product Name", "Retail Price", "Cost Price", "Quantity On Hand", "Quantity Sold", "Total Sales", "Total Cost", "Total Profit", "Total Profit %", "Warehouse Number"};
+        String[] columnNames = {"Product Name", "Retail Price", "Cost Price", "Quantity On Hand", "Quantity Sold",
+                                "Total Sales", "Total Cost", "Total Profit", "Total Profit %", "Warehouse Number"};
 
         for (int i = 0; i < products.size(); i++) {
             ArrayList<String> row = products.get(i);

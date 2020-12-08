@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="JavaSwingGUI.MainMenu">
-  <grid id="27dc6" binding="mainScreenPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="JavaSwingGUI.InvoiceMenu">
+  <grid id="27dc6" binding="invoiceMenuPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="592" height="400"/>
+      <xy x="20" y="20" width="500" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -24,13 +24,13 @@
               <font size="28"/>
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
-              <text value="Main Menu"/>
+              <text value="Invoice Menu"/>
               <verticalAlignment value="0"/>
             </properties>
           </component>
         </children>
       </grid>
-      <grid id="677ae" binding="panelBottom" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="e8234" binding="panelBottom" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -38,36 +38,28 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="1285b" class="javax.swing.JButton" binding="productsClicked">
+          <component id="57a6b" class="javax.swing.JButton" binding="createInvoiceClicked">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Products"/>
+              <text value="Create Invoice"/>
             </properties>
           </component>
-          <component id="e6fe6" class="javax.swing.JButton" binding="invoicesClicked">
-            <constraints>
-              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Invoices"/>
-            </properties>
-          </component>
-          <component id="6a61e" class="javax.swing.JButton" binding="employeesClicked">
+          <component id="2de63" class="javax.swing.JButton" binding="openInvoicesClicked">
             <constraints>
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Employees"/>
+              <text value="Open Invoices"/>
             </properties>
           </component>
-          <component id="6009f" class="javax.swing.JButton" binding="customersClicked">
+          <component id="64c4d" class="javax.swing.JButton" binding="closedInvoicesClicked">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Customers"/>
+              <text value="Closed Invoices"/>
             </properties>
           </component>
         </children>
