@@ -12,11 +12,12 @@ public class ProductsMenu extends JFrame {
     private JButton displayProductsProfitPercentButton;
     private JButton displayProducts5OrLessButton;
     private JButton editNumberOfWarehousesButton;
+    private JButton displayProductsOnHandButton;
 
     public ProductsMenu() {
 
         super("Products Menu");
-        setPreferredSize(new Dimension(750, 350));
+        setPreferredSize(new Dimension(1000, 600));
         this.setContentPane(this.panelProductsMenu);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
@@ -48,6 +49,14 @@ public class ProductsMenu extends JFrame {
             }
         });
 
+        displayProductsOnHandButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ArrayList<ArrayList<String>> productInfo = fileReaderWriter.getProducts("Products.txt", false, false, true);
+                DisplayProductsScreen displayProductsScreen = new DisplayProductsScreen(productInfo);
+                displayProductsScreen.setVisible(true);
+            }
+        });
 
         editNumberOfWarehousesButton.addActionListener(new ActionListener() {
             @Override
@@ -56,5 +65,6 @@ public class ProductsMenu extends JFrame {
                 editNumberOfWarehousesScreen.setVisible(true);
             }
         });
+
     }
 }

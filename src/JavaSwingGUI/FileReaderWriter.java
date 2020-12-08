@@ -66,10 +66,11 @@ public class FileReaderWriter {
                 getProducts(productInfo, product);
                 if (desc) addProductsDesc(productInfo, key, productsMap, product);
                 else if (fiveOrLess) addProductsFiveOrLess(productInfo, key, productsMap, product);
+                else if (warehouse) addProductsWarehouse(productInfo, key, productsMap, product);
             }
             Collections.sort(key);
             if (desc) for (int i = 0; i < key.size(); i++) resultSet.addAll(productsMap.get(key.get(key.size() - 1 - i)));
-            else if (fiveOrLess) for (Double numberInInventory : key) resultSet.addAll(productsMap.get(numberInInventory));
+            else if (fiveOrLess || warehouse) for (Double numberInInventory : key) resultSet.addAll(productsMap.get(numberInInventory));
             file.close();
             return resultSet;
         }
@@ -83,10 +84,10 @@ public class FileReaderWriter {
         // if profit percent isn't in arraylist,
         // add the productInfo json string into Arraylist, put that Arraylist into map with key profit percent
         if (!profitPercent.contains(product.getProfitPercent())) {
-            ArrayList<ArrayList<String >> possibleDuplicates = new ArrayList<>();
-            possibleDuplicates.add(productInfo);
+            ArrayList<ArrayList<String >> productsInformation = new ArrayList<>();
+            productsInformation.add(productInfo);
             profitPercent.add(product.getProfitPercent());
-            orderedProfit.put(product.getProfitPercent(), possibleDuplicates);
+            orderedProfit.put(product.getProfitPercent(), productsInformation);
         }
         else {
             orderedProfit.get(product.getProfitPercent()).add(productInfo);
@@ -95,15 +96,27 @@ public class FileReaderWriter {
 
     private void addProductsFiveOrLess(ArrayList<String> productInfo, ArrayList<Double> quantityOnHand, Map<Double, ArrayList<ArrayList<String>>> productsMap, Products product) {
         if (!quantityOnHand.contains((double) product.getQuantityOnHand())) {
-            ArrayList<ArrayList<String >> possibleDuplicates = new ArrayList<>();
+            ArrayList<ArrayList<String >> productsInformation = new ArrayList<>();
             if (product.getQuantityOnHand() <= 5) {
-                possibleDuplicates.add(productInfo);
+                productsInformation.add(productInfo);
                 quantityOnHand.add((double) product.getQuantityOnHand());
-                productsMap.put((double) product.getQuantityOnHand(), possibleDuplicates);
+                productsMap.put((double) product.getQuantityOnHand(), productsInformation);
             }
         }
         else {
             productsMap.get((double) product.getQuantityOnHand()).add(productInfo);
+        }
+    }
+
+    private void addProductsWarehouse(ArrayList<String> productInfo, ArrayList<Double> warehouseNumber, Map<Double, ArrayList<ArrayList<String>>> productsMap, Products product) {
+        if (!warehouseNumber.contains((double) product.getWarehouseNumber())) {
+            ArrayList<ArrayList<String>> productsInformation = new ArrayList<>();
+            productsInformation.add(productInfo);
+            warehouseNumber.add((double) product.getWarehouseNumber());
+            productsMap.put((double) product.getWarehouseNumber(), productsInformation);
+        }
+        else {
+            productsMap.get((double) product.getWarehouseNumber()).add(productInfo);
         }
     }
 
@@ -117,6 +130,7 @@ public class FileReaderWriter {
         productInfo.add(String.valueOf(product.getTotalCost()));
         productInfo.add(String.valueOf(product.getProfit()));
         productInfo.add(String.format("%.2f", product.getProfitPercent()));
+        productInfo.add(String.valueOf(product.getWarehouseNumber()));
     }
 
 }
