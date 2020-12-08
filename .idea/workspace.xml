@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22ee60be-62a9-45c8-b30c-cf54d21f52d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" afterDir="false" />
-    </list>
+    <list default="true" id="22ee60be-62a9-45c8-b30c-cf54d21f52d9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +13,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5059952">
+    <splitter split-orientation="horizontal" split-proportion="0.5767386">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -42,6 +37,11 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form">
+              <provider selected="true" editor-type-id="ui-designer" />
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Main.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -51,11 +51,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+                <state relative-caret-position="360">
+                  <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -122,18 +122,13 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/Products.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="437">
+                <state relative-caret-position="560">
                   <caret line="95" column="39" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
                 </state>
               </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form">
-              <provider selected="true" editor-type-id="ui-designer" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -200,14 +195,16 @@
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/Products.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.java" />
-        <option value="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java" />
+        <option value="$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1792" />
-    <option name="height" value="1120" />
+    <option name="x" value="-1046" />
+    <option name="y" value="-1080" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectId" id="1kU7hSgnFqSlsBpggl3LZmnkvyb" />
   <component name="ProjectView">
@@ -233,6 +230,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="JavaSwingGUI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Store Manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Store-Manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaSwingGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductsMenu" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -249,7 +253,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="358" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="236" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gson-2.8.6.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -301,9 +305,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1792" height="1120" extended-state="0" />
+    <frame x="-1046" y="-1080" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.069196425" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17552084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -312,7 +317,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297769" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21475257" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22308439" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -526,13 +531,6 @@
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/EditNumberOfWarehousesScreen.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/Products.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="95" column="39" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="632">
@@ -553,18 +551,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/Products.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="95" column="39" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/DisplayProductsScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        <state relative-caret-position="360">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/ProductsMenu.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
