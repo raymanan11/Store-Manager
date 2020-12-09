@@ -80,6 +80,8 @@ public class FileReaderWriter {
         return null;
     }
 
+    // public ArrayList<ArrayList<String>> getEmployeeInfo(String fileName) {}
+
     private void addProductsDesc(ArrayList<String> productInfo, ArrayList<Double> profitPercent, Map<Double, ArrayList<ArrayList<String>>> orderedProfit, Products product) {
         // if profit percent isn't in arraylist,
         // add the productInfo json string into Arraylist, put that Arraylist into map with key profit percent

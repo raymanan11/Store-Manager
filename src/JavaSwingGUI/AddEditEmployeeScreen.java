@@ -29,7 +29,6 @@ public class AddEditEmployeeScreen extends JFrame{
     private JTextField textCommisionPercentage;
     private JButton addButton;
     private JButton updateButton;
-    private JTextField textTotalSales;
     private JTextField textSSID;
     private DefaultListModel listEmployeeModel;
 
@@ -96,7 +95,6 @@ public class AddEditEmployeeScreen extends JFrame{
                     textSSID.getText(),
                     textPhoneNumber.getText(),
                     textMethodOfPayment.getText(),
-                    textTotalSales.getText(),
                     Double.parseDouble(textCommisionPercentage.getText()));
 
             String json = gson.toJson(employee);
@@ -146,7 +144,6 @@ public class AddEditEmployeeScreen extends JFrame{
                 textSSID.getText(),
                 textPhoneNumber.getText(),
                 textMethodOfPayment.getText(),
-                textTotalSales.getText(),
                 Double.parseDouble(textCommisionPercentage.getText()));
     }
 
@@ -157,7 +154,6 @@ public class AddEditEmployeeScreen extends JFrame{
         textPhoneNumber.setText("");
         textEmail.setText("");
         textMethodOfPayment.setText("");
-        textTotalSales.setText("");
         textSSID.setText("");
         textCommisionPercentage.setText("");
     }
@@ -175,7 +171,6 @@ public class AddEditEmployeeScreen extends JFrame{
             textCommisionPercentage.setText(String.valueOf(employee.getEmployeeCommissionPercentage()));
             textSSID.setText(employee.getEmployeeSSID());
             textMethodOfPayment.setText(employee.getEmployeeMethodOfPayment());
-            textTotalSales.setText(employee.getEmployeeTotalSales());
 
         }
     }

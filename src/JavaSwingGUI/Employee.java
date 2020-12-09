@@ -14,7 +14,7 @@ public class Employee {
     private String employeeSSID;
     private String employeePhoneNumber;
     private String employeeMethodOfPayment;
-    private String employeeTotalSales;
+    private double employeeTotalSales;
     private double employeeCommissionPercentage;
 
     public Employee() {
@@ -25,13 +25,13 @@ public class Employee {
         employeeSSID = "";
         employeePhoneNumber = "";
         employeeMethodOfPayment = "";
-        employeeTotalSales = "";
+        employeeTotalSales = 0;
         employeeCommissionPercentage = 0;
     }
 
     public Employee(String employeeName, String employeeDoB,
                     String employeeAddress, String employeeEmail, String employeeSSID, String employeePhoneNumber,
-                    String employeeMethodOfPayment, String employeeTotalSales, double employeeCommissionPercentage) {
+                    String employeeMethodOfPayment, double employeeCommissionPercentage) {
         this.employeeName = employeeName;
         setDateOfBirth(employeeDoB);
         this.employeeAddress = employeeAddress;
@@ -39,7 +39,7 @@ public class Employee {
         this.employeeSSID = employeeSSID;
         this.employeePhoneNumber = employeePhoneNumber;
         this.employeeMethodOfPayment = employeeMethodOfPayment;
-        this.employeeTotalSales = employeeTotalSales;
+        this.employeeTotalSales = 0;
         this.employeeCommissionPercentage = employeeCommissionPercentage;
     }
 
@@ -71,7 +71,7 @@ public class Employee {
         return employeePhoneNumber;
     }
 
-    public String getEmployeeTotalSales() {
+    public double getEmployeeTotalSales() {
         return employeeTotalSales;
     }
 
@@ -111,10 +111,6 @@ public class Employee {
         this.employeeCommissionPercentage = employeeCommissionPercentage;
     }
 
-    public void setEmployeeTotalSales(String employeeTotalSales) {
-        this.employeeTotalSales = employeeTotalSales;
-    }
-
     public void setEmployeeMethodOfPayment(String employeeMethodOfPayment) {
         this.employeeMethodOfPayment = employeeMethodOfPayment;
     }
@@ -125,7 +121,7 @@ public class Employee {
 
     public void setEmployee(String employeeName, String employeeDoB,
                     String employeeAddress, String employeeEmail, String employeeSSID, String employeePhoneNumber,
-                    String employeeMethodOfPayment, String employeeTotalSales, double employeeCommissionPercentage) {
+                    String employeeMethodOfPayment, double employeeCommissionPercentage) {
         this.employeeName = employeeName;
         setDateOfBirth(employeeDoB);
         this.employeeAddress = employeeAddress;
@@ -133,7 +129,7 @@ public class Employee {
         this.employeeSSID = employeeSSID;
         this.employeePhoneNumber = employeePhoneNumber;
         this.employeeMethodOfPayment = employeeMethodOfPayment;
-        this.employeeTotalSales = employeeTotalSales;
+        this.employeeTotalSales = 0;
         this.employeeCommissionPercentage = employeeCommissionPercentage;
     }
 
