@@ -42,8 +42,8 @@ public class MainMenu extends JFrame {
         employeesClicked.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AddEditEmployeeScreen addEmployee = new AddEditEmployeeScreen();
-                addEmployee.setVisible(true);
+                EmployeeMenu employeeMenu = new EmployeeMenu();
+                employeeMenu.setVisible(true);
             }
         });
 

@@ -167,8 +167,8 @@ public class FileReaderWriter {
             }
         }
         employeeInfo.add(employee.getEmployeeName());
-        employeeInfo.add(String.valueOf(totalSales));
-        employeeInfo.add(String.valueOf(totalSales * (employee.getEmployeeCommissionPercentage() / 100)));
+        employeeInfo.add(String.format("%.2f", totalSales));
+        employeeInfo.add(String.format("%.2f", totalSales * (employee.getEmployeeCommissionPercentage() / 100)));
     }
 
 }
