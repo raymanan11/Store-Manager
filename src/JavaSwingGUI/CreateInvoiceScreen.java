@@ -38,6 +38,7 @@ public class CreateInvoiceScreen extends JFrame{
     private JTextField productsList;
     private JTextField textDeliveryCost;
     private JLabel deliveryCostLabel;
+    private JButton clearButton;
     private DefaultListModel listProductsModel;
 
     private Gson gson;
@@ -140,6 +141,13 @@ public class CreateInvoiceScreen extends JFrame{
                 catch(DateTimeParseException excpt) {
                     messageWindow.showWindow("Please enter a valid invoice date. Please enter date as format MM/dd/yyy");
                 }
+            }
+        });
+
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetTextFields();
             }
         });
     }

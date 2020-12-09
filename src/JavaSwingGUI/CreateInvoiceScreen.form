@@ -286,6 +286,12 @@
               <text value="Create Invoice"/>
             </properties>
           </component>
+          <component id="e66ee" class="javax.swing.JButton" binding="clearButton" default-binding="true">
+            <constraints border-constraint="East"/>
+            <properties>
+              <text value="Clear"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>

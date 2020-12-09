@@ -30,6 +30,7 @@ public class AddEditEmployeeScreen extends JFrame{
     private JButton addButton;
     private JButton updateButton;
     private JTextField textSSID;
+    private JButton clearButton;
     private DefaultListModel listEmployeeModel;
 
     private Gson gson;
@@ -81,6 +82,13 @@ public class AddEditEmployeeScreen extends JFrame{
             public void valueChanged(ListSelectionEvent e) {
                 updateButton.setEnabled(true);
                 populateTextFields(e);
+            }
+        });
+
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetTextFields();
             }
         });
     }

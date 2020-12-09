@@ -30,6 +30,7 @@ public class AddEditCustomersScren extends JFrame {
     private JCheckBox active;
     private JButton updateButton;
     private JScrollPane customersScroll;
+    private JButton clearButton;
     private DefaultListModel listCustomersModel;
 
     private Gson gson;
@@ -81,6 +82,13 @@ public class AddEditCustomersScren extends JFrame {
             public void valueChanged(ListSelectionEvent e) {
                 updateButton.setEnabled(true);
                 populateTextFields(e);
+            }
+        });
+
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetTextFields();
             }
         });
     }
