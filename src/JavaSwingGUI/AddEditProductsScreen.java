@@ -21,6 +21,7 @@ public class AddEditProductsScreen extends JFrame {
     private JButton addButton;
     private JButton updateButton;
     private JList productsList;
+    private JButton clearButton;
     private DefaultListModel listProductsModel;
 
 
@@ -72,6 +73,13 @@ public class AddEditProductsScreen extends JFrame {
             public void valueChanged(ListSelectionEvent e) {
                 updateButton.setEnabled(true);
                 populateTextFields(e);
+            }
+        });
+
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetTextFields();
             }
         });
     }
