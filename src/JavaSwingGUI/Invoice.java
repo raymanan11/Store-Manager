@@ -1,5 +1,7 @@
 package JavaSwingGUI;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -8,13 +10,14 @@ public class Invoice {
     private String invoiceID;
     private String invoiceCustomer;
     private String invoiceEmployee;
-    private Date invoiceDate;
+    private LocalDate invoiceDate;
     private ArrayList<String> invoiceProducts;
     private boolean active;
     private double amountPaid;
     private double taxRate;
     private boolean delivery;
     private double deliveryCharge;
+    private double totalCost;
 
 
     public Invoice() {
@@ -23,6 +26,7 @@ public class Invoice {
         invoiceDate = null;
         invoiceProducts = null;
         active = false;
+        totalCost = 0;
         amountPaid = 0;
         taxRate = 0;
         delivery = false;
@@ -30,14 +34,15 @@ public class Invoice {
     }
 
 
-    public Invoice(String invoiceCustomer, String invoiceEmployee, Date invoiceDate, ArrayList<String> invoiceProducts,
-                   boolean active, double amountPaid, double taxRate, boolean delivery, double deliveryCharge) {
+    public Invoice(String invoiceCustomer, String invoiceEmployee, String invoiceDate, ArrayList<String> invoiceProducts,
+                   boolean active, double totalCost, double amountPaid, double taxRate, boolean delivery, double deliveryCharge) {
         this.invoiceID = invoiceID;
         this.invoiceCustomer = invoiceCustomer;
         this.invoiceEmployee = invoiceEmployee;
-        this.invoiceDate = invoiceDate;
+        setInvoiceDate(invoiceDate);
         this.invoiceProducts = invoiceProducts;
         this.active = active;
+        this.totalCost = totalCost;
         this.amountPaid = amountPaid;
         this.taxRate = taxRate;
         this.delivery = delivery;
@@ -48,7 +53,7 @@ public class Invoice {
         return invoiceID;
     }
 
-    public Date getInvoiceDate() {
+    public LocalDate getInvoiceDate() {
         return invoiceDate;
     }
 
@@ -110,8 +115,8 @@ public class Invoice {
         this.amountPaid = amountPaid;
     }
 
-    public void setInvoiceDate(Date invoiceDate) {
-        this.invoiceDate = invoiceDate;
+    public void setInvoiceDate(String invoiceDate) {
+        this.invoiceDate = LocalDate.parse(invoiceDate, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
     }
 
 //    public void setActive(boolean active) {

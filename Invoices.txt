@@ -1,0 +1,1 @@
+{"invoiceCustomer":"Kobe James","invoiceEmployee":"Ali Mourad","invoiceDate":{"year":2020,"month":12,"day":6},"invoiceProducts":["Walkman  4x"],"active":true,"amountPaid":40.0,"taxRate":6.0,"delivery":true,"deliveryCharge":5.0,"totalCost":68.9}

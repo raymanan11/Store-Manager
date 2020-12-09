@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
 public class CreateInvoiceScreen extends JFrame{
@@ -127,6 +128,70 @@ public class CreateInvoiceScreen extends JFrame{
                 }
             }
         });
+
+        createInvoiceButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    if(!checkName(textCustomerName.getText()) || textCustomerName.getText().equals("")) {
+                        messageWindow.showWindow("Please enter an existing customer name.");
+                        return;
+                    }
+                    if(!checkEmployee(textEmployeeName.getText()) || textEmployeeName.getText().equals("")) {
+                        messageWindow.showWindow("Please enter an existing employee name.");
+                        return;
+                    }
+                    if(textTotalCost.getText().equals("") || productsList.getText().equals("")) {
+                        messageWindow.showWindow("Please select a Product and it's Quantity.");
+                        return;
+                    }
+                    double deliveryCharge = Double.valueOf(getDeliveryCharge());
+                    double salesTax = Double.parseDouble(textSalesTaxPercentage.getText());
+                    totalCost = totalCost + deliveryCharge;
+                    totalCost = totalCost + (totalCost * (salesTax / 100));
+                    textTotalCost.setText(String.valueOf(totalCost));
+                    Invoice invoice = new Invoice(textCustomerName.getText(), textEmployeeName.getText(), textInitialDate.getText(), productsOnInvoice, active.isSelected(), totalCost, Double.parseDouble(textAmountPaid.getText()), salesTax, delivery.isSelected(), deliveryCharge);
+                    String invoiceJSON = gson.toJson(invoice);
+                    fileReaderWriter.writeFile(invoiceJSON, "Invoices.txt");
+                    double amountPaid = Double.valueOf(textAmountPaid.getText());
+                    setActive(amountPaid);
+                    messageWindow.showWindow("Added Invoice!");
+                }
+                catch (NumberFormatException excpt) {
+                    messageWindow.showWindow("Please enter a valid number.");
+                }
+                catch(DateTimeParseException excpt) {
+                    messageWindow.showWindow("Please enter a valid invoice date. Please enter date as format MM/dd/yyy");
+                }
+            }
+        });
+    }
+
+    public boolean checkName(String customersInput) {
+        ArrayList<String> customersGSON = fileReaderWriter.readFile("Customers.txt");
+        for (String customerGSON : customersGSON) {
+            Customers customer = gson.fromJson(customerGSON, Customers.class);
+            if (customer.getCustomerName().equals(customersInput)) return true;
+        }
+        return false;
+    }
+
+    public boolean checkEmployee(String employeeInput) {
+        ArrayList<String> employeesJSON = fileReaderWriter.readFile("Employees.txt");
+        for (String employeeJSON : employeesJSON) {
+            Employee employee = gson.fromJson(employeeJSON, Employee.class);
+            if (employee.getEmployeeName().equals(employeeInput)) return true;
+        }
+        return false;
+    }
+
+    public void setActive(double amountPaid) {
+        if(totalCost == amountPaid) active.setSelected(false);
+    }
+
+    public String getDeliveryCharge() {
+        if (delivery.isSelected()) return textDeliveryCost.getText();
+        return "0";
     }
 
     public void refreshList() {

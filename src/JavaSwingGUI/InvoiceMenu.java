@@ -17,7 +17,7 @@ public class InvoiceMenu extends JFrame{
         super("Invoice Menu");
         setPreferredSize(new Dimension(500, 350));
         this.setContentPane(this.invoiceMenuPanel);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
         this.setLocationRelativeTo(null);
 
