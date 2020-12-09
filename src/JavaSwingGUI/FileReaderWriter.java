@@ -171,4 +171,6 @@ public class FileReaderWriter {
         employeeInfo.add(String.format("%.2f", totalSales * (employee.getEmployeeCommissionPercentage() / 100)));
     }
 
+//    private void openInvoice
+
 }
