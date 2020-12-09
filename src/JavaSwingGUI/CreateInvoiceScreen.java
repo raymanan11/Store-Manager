@@ -1,6 +1,8 @@
 package JavaSwingGUI;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
@@ -34,6 +36,8 @@ public class CreateInvoiceScreen extends JFrame{
     private JButton createInvoiceButton;
     private JButton addProductsButton;
     private JTextField productsList;
+    private JTextField textDeliveryCost;
+    private JLabel deliveryCostLabel;
     private DefaultListModel listProductsModel;
 
     private Gson gson;
@@ -66,6 +70,9 @@ public class CreateInvoiceScreen extends JFrame{
         currentSelectedProduct = null;
         productToBeAddedToInvoice = "";
         productsOnInvoice = new ArrayList<>();
+
+        deliveryCostLabel.setVisible(false);
+        textDeliveryCost.setVisible(false);
 
         refreshList();
 
@@ -102,6 +109,21 @@ public class CreateInvoiceScreen extends JFrame{
                 }
                 catch (NumberFormatException excpt) {
                     messageWindow.showWindow("Please enter a valid number for Quantity of Product.");
+                }
+            }
+        });
+
+
+        delivery.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (delivery.isSelected()) {
+                    deliveryCostLabel.setVisible(true);
+                    textDeliveryCost.setVisible(true);
+                }
+                else if (!delivery.isSelected()) {
+                    deliveryCostLabel.setVisible(false);
+                    textDeliveryCost.setVisible(false);
                 }
             }
         });
