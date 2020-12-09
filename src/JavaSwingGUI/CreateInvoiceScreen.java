@@ -33,7 +33,6 @@ public class CreateInvoiceScreen extends JFrame{
     private JTextField quantityOfProduct;
     private JPanel addProductPanel;
     private JPanel buttonPanel;
-    // save the Arraylist productsOnInvoice
     private JButton createInvoiceButton;
     private JButton addProductsButton;
     private JTextField productsList;
@@ -225,5 +224,6 @@ public class CreateInvoiceScreen extends JFrame{
         deliveryCostLabel.setVisible(false);
         textDeliveryCost.setText("");
         textDeliveryCost.setVisible(false);
+        listOfProducts.clearSelection();
     }
 }
