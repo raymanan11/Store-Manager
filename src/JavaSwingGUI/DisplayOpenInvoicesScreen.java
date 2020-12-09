@@ -28,8 +28,8 @@ public class DisplayOpenInvoicesScreen extends JFrame{
     public void createTable() {
 
         String[][] invoiceData = new String[invoices.size()][];
-        String[] columnNames = {"Invoice ID", "Customer", "Employee", "Payment Type", "Invoice Date",
-                "Products", "Status", "Amount Paid", "Tax Rate", "Pickup", "Delivery","Delivery Charge"};
+        String[] columnNames = { "Customer Name", "Employee Name", "Invoice Date",
+                "Products", "Status", "Amount Paid", "Tax Rate","Delivery","Delivery Charge", "Total Cost"};
 
         for (int i = 0; i < invoices.size(); i++) {
             ArrayList<String> row = invoices.get(i);

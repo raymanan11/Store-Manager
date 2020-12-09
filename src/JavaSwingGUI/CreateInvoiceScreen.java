@@ -50,6 +50,7 @@ public class CreateInvoiceScreen extends JFrame{
     private Products currentSelectedProduct;
     private String productToBeAddedToInvoice;
     private double totalCost;
+    private double customerSalesTax;
 
     public CreateInvoiceScreen(){
 
@@ -156,7 +157,10 @@ public class CreateInvoiceScreen extends JFrame{
         ArrayList<String> customersGSON = fileReaderWriter.readFile("Customers.txt");
         for (String customerGSON : customersGSON) {
             Customers customer = gson.fromJson(customerGSON, Customers.class);
-            if (customer.getCustomerName().equals(customersInput)) return true;
+            if (customer.getCustomerName().equals(customersInput)){
+                customerSalesTax = customer.getSalesTaxPercentage();
+                return true;
+            }
         }
         return false;
     }
@@ -201,15 +205,17 @@ public class CreateInvoiceScreen extends JFrame{
             messageWindow.showWindow("Please select a Product and it's Quantity.");
             return;
         }
-        double deliveryCharge = Double.valueOf(getDeliveryCharge());
-        double salesTax = Double.parseDouble(textSalesTaxPercentage.getText());
+        double deliveryCharge = Double.parseDouble(getDeliveryCharge());
         totalCost = totalCost + deliveryCharge;
-        totalCost = totalCost + (totalCost * (salesTax / 100));
-        textTotalCost.setText(String.valueOf(totalCost));
-        Invoice invoice = new Invoice(textCustomerName.getText(), textEmployeeName.getText(), textInitialDate.getText(), productsOnInvoice, active.isSelected(), totalCost, Double.parseDouble(textAmountPaid.getText()), salesTax, delivery.isSelected(), deliveryCharge);
+        totalCost = totalCost + (totalCost * (customerSalesTax / 100));
+        totalCost= Math.round(totalCost *100.0)/100.0;
+        textTotalCost.setText(String.format("%.2f",totalCost));
+        Invoice invoice = new Invoice(textCustomerName.getText(), textEmployeeName.getText(), textInitialDate.getText(),
+                                productsOnInvoice, active.isSelected(), totalCost, Double.parseDouble(textAmountPaid.getText()),
+                                customerSalesTax, delivery.isSelected(), deliveryCharge);
         String invoiceJSON = gson.toJson(invoice);
         fileReaderWriter.writeFile(invoiceJSON, "Invoices.txt");
-        double amountPaid = Double.valueOf(textAmountPaid.getText());
+        double amountPaid = Double.parseDouble(textAmountPaid.getText());
         setActive(amountPaid);
         messageWindow.showWindow("Added Invoice!");
 
