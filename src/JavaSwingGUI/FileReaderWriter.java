@@ -7,6 +7,8 @@ import java.util.*;
 
 public class FileReaderWriter {
 
+    Gson gson = new Gson();
+
     public ArrayList<String> readFile(String fileName) {
         try {
             ArrayList<String> resultSet = new ArrayList<>();
@@ -80,7 +82,27 @@ public class FileReaderWriter {
         return null;
     }
 
-    // public ArrayList<ArrayList<String>> getEmployeeInfo(String fileName) {}
+    public ArrayList<ArrayList<String>> getEmployeeInfo(String fileName) {
+        try {
+            ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
+            ArrayList<String> employeeInfo;
+            Scanner file = new Scanner(new File(fileName));
+            Gson gson = new Gson();
+            while (file.hasNextLine()) {
+                employeeInfo = new ArrayList<>();
+                Employee employee = gson.fromJson(file.nextLine(), Employee.class);
+                // add values from products class into products ArrayList
+                getEmployees(employeeInfo, employee);
+                resultSet.add(employeeInfo);
+            }
+            file.close();
+            return resultSet;
+        }
+        catch (IOException e) {
+            System.out.println("Wrong file name!");
+        }
+        return null;
+    }
 
     private void addProductsDesc(ArrayList<String> productInfo, ArrayList<Double> profitPercent, Map<Double, ArrayList<ArrayList<String>>> orderedProfit, Products product) {
         // if profit percent isn't in arraylist,
@@ -133,6 +155,20 @@ public class FileReaderWriter {
         productInfo.add(String.valueOf(product.getProfit()));
         productInfo.add(String.format("%.2f", product.getProfitPercent()));
         productInfo.add(String.valueOf(product.getWarehouseNumber()));
+    }
+
+    private void getEmployees(ArrayList<String> employeeInfo, Employee employee) {
+        ArrayList<String> invcoiceInfo = readFile("Invoices.txt");
+        double totalSales = 0;
+        for (String invoiceJSON : invcoiceInfo) {
+            Invoice invoice = gson.fromJson(invoiceJSON, Invoice.class);
+            if (employee.getEmployeeName().equals(invoice.getInvoiceEmployee())) {
+                totalSales += invoice.getTotalCost();
+            }
+        }
+        employeeInfo.add(employee.getEmployeeName());
+        employeeInfo.add(String.valueOf(totalSales));
+        employeeInfo.add(String.valueOf(totalSales * (employee.getEmployeeCommissionPercentage() / 100)));
     }
 
 }

@@ -53,6 +53,18 @@ public class Invoice {
         return invoiceID;
     }
 
+    public String getInvoiceCustomer() {
+        return invoiceCustomer;
+    }
+
+    public String getInvoiceEmployee() {
+        return invoiceEmployee;
+    }
+
+    public double getTotalCost() {
+        return totalCost;
+    }
+
     public LocalDate getInvoiceDate() {
         return invoiceDate;
     }
