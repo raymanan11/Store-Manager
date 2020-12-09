@@ -1,6 +1,8 @@
 package JavaSwingGUI;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 import com.google.gson.Gson;
 
@@ -27,15 +29,22 @@ public class CreateInvoiceScreen extends JFrame{
     private JCheckBox delivery;
     private JTextField quantityOfProduct;
     private JPanel addProductPanel;
-    private JButton updateInvoiceButton;
     private JPanel buttonPanel;
+    // save the Arraylist productsOnInvoice
     private JButton createInvoiceButton;
+    private JButton addProductsButton;
+    private JTextField productsList;
     private DefaultListModel listProductsModel;
 
     private Gson gson;
     private ArrayList<String> jsonResults;
+    private ArrayList<String> productsOnInvoice;
     private FileReaderWriter fileReaderWriter;
     private Message messageWindow;
+
+    private Products currentSelectedProduct;
+    private String productToBeAddedToInvoice;
+    private double totalCost;
 
     public CreateInvoiceScreen(){
 
@@ -54,23 +63,56 @@ public class CreateInvoiceScreen extends JFrame{
         fileReaderWriter = new FileReaderWriter();
         messageWindow = new Message();
 
-//        refreshList();
+        currentSelectedProduct = null;
+        productToBeAddedToInvoice = "";
+        productsOnInvoice = new ArrayList<>();
 
-//        addProductButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                addProducts(e);
-//                refreshList();
-//            }
-//        });
-//    }
-//
-//    public void refreshList() {
-//        jsonResults = fileReaderWriter.readFile("Products.txt");
-//        listProductsModel.removeAllElements();
-//        for (String productsJSON : jsonResults) {
-//            Products product = gson.fromJson(productsJSON, Products.class);
-//            listProductsModel.addElement(product.getProductName());
-//        }
+        refreshList();
+
+        listOfProducts.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if (e.getValueIsAdjusting()) {
+                    String productsJSON = jsonResults.get(listOfProducts.getSelectedIndex());
+                    currentSelectedProduct = gson.fromJson(productsJSON, Products.class);
+                    productToBeAddedToInvoice = currentSelectedProduct.getProductName();
+                    System.out.println(productToBeAddedToInvoice);
+                }
+            }
+        });
+
+        addProductsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    if (productToBeAddedToInvoice.equals("")) {
+                        messageWindow.showWindow("Please select a product before proceeding.");
+                        return;
+                    }
+                    if (quantityOfProduct.getText().equals("")) {
+                        messageWindow.showWindow("Please enter a number for Quantity of Product before proceeding.");
+                        return;
+                    }
+                    int quantity = Integer.parseInt(quantityOfProduct.getText());
+                    productsOnInvoice.add(productToBeAddedToInvoice + "  " + quantity + "x");
+                    productsList.setText(productsOnInvoice.toString().substring(1, productsOnInvoice.toString().length() - 1));
+                    totalCost = totalCost + (currentSelectedProduct.getRetailPrice() * quantity);
+                    textTotalCost.setText(String.valueOf(totalCost));
+                    quantityOfProduct.setText("");
+                }
+                catch (NumberFormatException excpt) {
+                    messageWindow.showWindow("Please enter a valid number for Quantity of Product.");
+                }
+            }
+        });
+    }
+
+    public void refreshList() {
+        jsonResults = fileReaderWriter.readFile("Products.txt");
+        listProductsModel.removeAllElements();
+        for (String productsJSON : jsonResults) {
+            Products product = gson.fromJson(productsJSON, Products.class);
+            listProductsModel.addElement(product.getProductName());
+        }
     }
 }

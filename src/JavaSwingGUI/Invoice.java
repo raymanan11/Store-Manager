@@ -1,49 +1,45 @@
 package JavaSwingGUI;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Invoice {
 
     private String invoiceID;
-    private Customers invoiceCustomer;
-    private Employee invoiceEmployee;
-    private String invoiceMethodOfPayment;
+    private String invoiceCustomer;
+    private String invoiceEmployee;
     private Date invoiceDate;
-    private Products[] invoiceProducts;
-    private boolean invoiceStatus;
+    private ArrayList<String> invoiceProducts;
+    private boolean active;
     private double amountPaid;
     private double taxRate;
-    private boolean pickUp;
     private boolean delivery;
     private double deliveryCharge;
+
 
     public Invoice() {
         invoiceID = "";
         invoiceCustomer = null;
-        invoiceMethodOfPayment = "";
         invoiceDate = null;
         invoiceProducts = null;
-        invoiceStatus = false;
+        active = false;
         amountPaid = 0;
         taxRate = 0;
-        pickUp = false;
         delivery = false;
         deliveryCharge = 0;
     }
 
 
-    public Invoice(String invoiceID, Customers invoiceCustomer, Employee invoiceEmployee, String invoiceMethodOfPayment, Date invoiceDate, Products[] invoiceProducts,
-                   boolean invoiceStatus, double amountPaid, double taxRate, boolean pickUp, boolean delivery, double deliveryCharge) {
+    public Invoice(String invoiceCustomer, String invoiceEmployee, Date invoiceDate, ArrayList<String> invoiceProducts,
+                   boolean active, double amountPaid, double taxRate, boolean delivery, double deliveryCharge) {
         this.invoiceID = invoiceID;
         this.invoiceCustomer = invoiceCustomer;
         this.invoiceEmployee = invoiceEmployee;
-        this.invoiceMethodOfPayment = invoiceMethodOfPayment;
         this.invoiceDate = invoiceDate;
         this.invoiceProducts = invoiceProducts;
-        this.invoiceStatus = invoiceStatus;
+        this.active = active;
         this.amountPaid = amountPaid;
         this.taxRate = taxRate;
-        this.pickUp = pickUp;
         this.delivery = delivery;
         this.deliveryCharge = deliveryCharge;
     }
@@ -52,23 +48,11 @@ public class Invoice {
         return invoiceID;
     }
 
-    public Customers getInvoiceCustomer() {
-        return invoiceCustomer;
-    }
-
-    public Employee getInvoiceEmployee() {
-        return invoiceEmployee;
-    }
-
-    public String getInvoiceMethodOfPayment() {
-        return invoiceMethodOfPayment;
-    }
-
     public Date getInvoiceDate() {
         return invoiceDate;
     }
 
-    public Products[] getInvoiceProducts() {
+    public ArrayList<String> getInvoiceProducts() {
         return invoiceProducts;
     }
 
@@ -76,8 +60,8 @@ public class Invoice {
         return amountPaid;
     }
 
-    public boolean getInvoiceStatus() {
-        return invoiceStatus;
+    public boolean getActive() {
+        return active;
     }
 
     public double getTaxRate() {
@@ -85,11 +69,7 @@ public class Invoice {
     }
 
     public boolean isInvoicePaid() {
-        return invoiceStatus;
-    }
-
-    public boolean isPickUp() {
-        return pickUp;
+        return active;
     }
 
     public boolean isDelivery() {
@@ -100,27 +80,27 @@ public class Invoice {
         return deliveryCharge;
     }
 
-    public double getInvoiceTotal() {
-        double totalProductsPrice = getTotalProductsPrice();
-        return totalProductsPrice * taxRate;
-    }
+//    public double getInvoiceTotal() {
+//        double totalProductsPrice = getTotalProductsPrice();
+//        return totalProductsPrice * taxRate;
+//    }
+//
+//    public double getAmountDue() {
+//        double totalProductsPrice = getTotalProductsPrice();
+//        return totalProductsPrice - amountPaid;
+//    }
 
-    public double getAmountDue() {
-        double totalProductsPrice = getTotalProductsPrice();
-        return totalProductsPrice - amountPaid;
-    }
+//    private double getTotalProductsPrice() {
+//        double totalProductsPrice = 0;
+//        for (int i = 0; i < invoiceProducts.length; i++) {
+//            totalProductsPrice += invoiceProducts[i].getCostPrice();
+//        }
+//        return totalProductsPrice;
+//    }
 
-    private double getTotalProductsPrice() {
-        double totalProductsPrice = 0;
-        for (int i = 0; i < invoiceProducts.length; i++) {
-            totalProductsPrice += invoiceProducts[i].getCostPrice();
-        }
-        return totalProductsPrice;
-    }
-
-    public double getEmployeeComissionAmount() {
-        return getTotalProductsPrice() * invoiceEmployee.getEmployeeCommissionPercentage();
-    }
+//    public double getEmployeeComissionAmount() {
+//        return getTotalProductsPrice() * invoiceEmployee.getEmployeeCommissionPercentage();
+//    }
 
     public void setInvoiceID(String invoiceID) {
         this.invoiceID = invoiceID;
@@ -130,44 +110,28 @@ public class Invoice {
         this.amountPaid = amountPaid;
     }
 
-    public void setInvoiceCustomer(Customers invoiceCustomer) {
-        this.invoiceCustomer = invoiceCustomer;
-    }
-
-    public void setInvoiceEmployee(Employee invoiceEmployee) {
-        this.invoiceEmployee = invoiceEmployee;
-    }
-
     public void setInvoiceDate(Date invoiceDate) {
         this.invoiceDate = invoiceDate;
     }
 
-    public void setInvoiceMethodOfPayment(String invoiceMethodOfPayment) {
-        this.invoiceMethodOfPayment = invoiceMethodOfPayment;
-    }
-
-    public void setInvoiceProducts(Products[] invoiceProducts) {
-        this.invoiceProducts = invoiceProducts;
-    }
-
-    public void setInvoiceStatus(boolean invoiceStatus) {
-        this.invoiceStatus = invoiceStatus;
-        invoiceCustomer.setActive(invoiceStatus);
-    }
+//    public void setActive(boolean active) {
+//        this.active = active;
+//        invoiceCustomer.setActive(active);
+//    }
 
     public void setTaxRate(double taxRate) {
         this.taxRate = taxRate;
     }
 
-    public void setPickUp(boolean pickUp) {
-        this.pickUp = pickUp;
-        delivery = !pickUp;
-    }
+//    public void setPickUp(boolean pickUp) {
+//        this.pickUp = pickUp;
+//        delivery = !pickUp;
+//    }
 
-    public void setDelivery(boolean delivery) {
-        this.delivery = delivery;
-        pickUp = !delivery;
-    }
+//    public void setDelivery(boolean delivery) {
+//        this.delivery = delivery;
+//        pickUp = !delivery;
+//    }
 
     public void setDeliveryCharge(double deliveryCharge) {
         if (delivery) this.deliveryCharge = deliveryCharge;
