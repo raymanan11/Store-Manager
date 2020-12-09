@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="22ee60be-62a9-45c8-b30c-cf54d21f52d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/CreateInvoiceScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/CreateInvoiceScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/InvoiceMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/InvoiceMenu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +15,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.2912192">
+    <splitter split-orientation="horizontal" split-proportion="0.45230573">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -132,15 +130,19 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/CreateInvoiceScreen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="371">
-                  <caret line="152" column="182" selection-start-line="152" selection-start-column="182" selection-end-line="152" selection-end-column="182" />
+                <state relative-caret-position="673">
+                  <caret line="223" column="36" lean-forward="true" selection-start-line="223" selection-start-column="36" selection-end-line="223" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Invoices.txt">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="18">
+                  <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -259,8 +261,8 @@
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/AddEditEmployeeScreen.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/InvoiceMenu.java" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/CreateInvoiceScreen.form" />
-        <option value="$PROJECT_DIR$/Invoices.txt" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/Invoice.java" />
+        <option value="$PROJECT_DIR$/Invoices.txt" />
         <option value="$PROJECT_DIR$/src/JavaSwingGUI/CreateInvoiceScreen.java" />
       </list>
     </option>
@@ -389,7 +391,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297769" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36503068" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1574642" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -691,9 +693,6 @@
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/CreateInvoiceScreen.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Invoices.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/Invoice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -704,10 +703,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Invoices.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaSwingGUI/CreateInvoiceScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="152" column="182" selection-start-line="152" selection-start-column="182" selection-end-line="152" selection-end-column="182" />
+        <state relative-caret-position="673">
+          <caret line="223" column="36" lean-forward="true" selection-start-line="223" selection-start-column="36" selection-end-line="223" selection-end-column="36" />
         </state>
       </provider>
     </entry>

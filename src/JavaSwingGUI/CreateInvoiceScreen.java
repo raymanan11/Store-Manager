@@ -133,29 +133,7 @@ public class CreateInvoiceScreen extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    if(!checkName(textCustomerName.getText()) || textCustomerName.getText().equals("")) {
-                        messageWindow.showWindow("Please enter an existing customer name.");
-                        return;
-                    }
-                    if(!checkEmployee(textEmployeeName.getText()) || textEmployeeName.getText().equals("")) {
-                        messageWindow.showWindow("Please enter an existing employee name.");
-                        return;
-                    }
-                    if(textTotalCost.getText().equals("") || productsList.getText().equals("")) {
-                        messageWindow.showWindow("Please select a Product and it's Quantity.");
-                        return;
-                    }
-                    double deliveryCharge = Double.valueOf(getDeliveryCharge());
-                    double salesTax = Double.parseDouble(textSalesTaxPercentage.getText());
-                    totalCost = totalCost + deliveryCharge;
-                    totalCost = totalCost + (totalCost * (salesTax / 100));
-                    textTotalCost.setText(String.valueOf(totalCost));
-                    Invoice invoice = new Invoice(textCustomerName.getText(), textEmployeeName.getText(), textInitialDate.getText(), productsOnInvoice, active.isSelected(), totalCost, Double.parseDouble(textAmountPaid.getText()), salesTax, delivery.isSelected(), deliveryCharge);
-                    String invoiceJSON = gson.toJson(invoice);
-                    fileReaderWriter.writeFile(invoiceJSON, "Invoices.txt");
-                    double amountPaid = Double.valueOf(textAmountPaid.getText());
-                    setActive(amountPaid);
-                    messageWindow.showWindow("Added Invoice!");
+                    addInvoice(e);
                 }
                 catch (NumberFormatException excpt) {
                     messageWindow.showWindow("Please enter a valid number.");
@@ -201,5 +179,51 @@ public class CreateInvoiceScreen extends JFrame{
             Products product = gson.fromJson(productsJSON, Products.class);
             listProductsModel.addElement(product.getProductName());
         }
+    }
+
+    public void addInvoice(ActionEvent e) {
+        if(!checkName(textCustomerName.getText()) || textCustomerName.getText().equals("")) {
+            messageWindow.showWindow("Please enter an existing customer name.");
+            return;
+        }
+        if(!checkEmployee(textEmployeeName.getText()) || textEmployeeName.getText().equals("")) {
+            messageWindow.showWindow("Please enter an existing employee name.");
+            return;
+        }
+        if(textTotalCost.getText().equals("") || productsList.getText().equals("")) {
+            messageWindow.showWindow("Please select a Product and it's Quantity.");
+            return;
+        }
+        double deliveryCharge = Double.valueOf(getDeliveryCharge());
+        double salesTax = Double.parseDouble(textSalesTaxPercentage.getText());
+        totalCost = totalCost + deliveryCharge;
+        totalCost = totalCost + (totalCost * (salesTax / 100));
+        textTotalCost.setText(String.valueOf(totalCost));
+        Invoice invoice = new Invoice(textCustomerName.getText(), textEmployeeName.getText(), textInitialDate.getText(), productsOnInvoice, active.isSelected(), totalCost, Double.parseDouble(textAmountPaid.getText()), salesTax, delivery.isSelected(), deliveryCharge);
+        String invoiceJSON = gson.toJson(invoice);
+        fileReaderWriter.writeFile(invoiceJSON, "Invoices.txt");
+        double amountPaid = Double.valueOf(textAmountPaid.getText());
+        setActive(amountPaid);
+        messageWindow.showWindow("Added Invoice!");
+
+        resetTextFields();
+    }
+
+    public void resetTextFields() {
+        totalCost = 0;
+        productsOnInvoice = new ArrayList<>();
+        productToBeAddedToInvoice = "";
+        textCustomerName.setText("");
+        textEmployeeName.setText("");
+        textTotalCost.setText("");
+        productsList.setText("");
+        textInitialDate.setText("");
+        textAmountPaid.setText("");
+        textSalesTaxPercentage.setText("");
+        active.setSelected(false);
+        delivery.setSelected(false);
+        deliveryCostLabel.setVisible(false);
+        textDeliveryCost.setText("");
+        textDeliveryCost.setVisible(false);
     }
 }
