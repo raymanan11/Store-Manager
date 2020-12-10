@@ -123,9 +123,7 @@ public class FileReaderWriter {
                 invoiceInfo = new ArrayList<>();
                 Invoice invoice = gson.fromJson(file.nextLine(), Invoice.class);
                 if (!invoice.getActive()) {
-                    System.out.println("hi");
                     getInvoice(invoiceInfo, invoice);
-                    System.out.println(invoiceInfo);
                     addInvoiceAmount(invoiceInfo, key, invoicesMap, invoice);
                 }
                 // add values from products class into products arraylist
@@ -220,7 +218,6 @@ public class FileReaderWriter {
     private void addInvoiceAmount(ArrayList<String> invoiceInfo, ArrayList<Double> invoiceAmount, Map<Double, ArrayList<ArrayList<String>>> invoicesMap, Invoice invoice) {
         if (!invoiceAmount.contains(invoice.getTotalCost())) {
             ArrayList<ArrayList<String>> invoiceInformation = new ArrayList<>();
-            System.out.println("invoice is not active");
             invoiceInformation.add(invoiceInfo);
             invoiceAmount.add(invoice.getTotalCost());
             invoicesMap.put(invoice.getTotalCost(), invoiceInformation);

@@ -8,10 +8,9 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
-import java.beans.PropertyChangeListener;import java.util.ArrayList;
+import java.util.Collections;
+import java.util.PropertyPermission;
 
 public class DisplayOpenInvoicesScreen extends JFrame{
     private JPanel invoicesPanel;
@@ -34,23 +33,36 @@ public class DisplayOpenInvoicesScreen extends JFrame{
         openInvoicesTable.getModel().addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
+                ArrayList<String> invoicesJSON = fileReaderWriter.readFile("Invoices.txt");
                 int column = openInvoicesTable.getSelectedColumn();
                 int row = openInvoicesTable.getSelectedRow();
                 System.out.println(openInvoicesTable.getValueAt(row,column));
                 System.out.println(openInvoicesTable.getColumnName(column));
                 invoices.get(row).set(column,String.valueOf(openInvoicesTable.getValueAt(row,column)));
-                System.out.println(invoices);
-//                ArrayList<String> invoicesJson;
-//                invoicesJson = fileReaderWriter.readFile("Invoices.txt");
-//                Gson gson = new Gson();
-//                Invoice invoice = gson.fromJson(invoicesJson.get(row), Invoice.class);
-                fileReaderWriter.writeFile(invoices.get(row), "Invoices.txt");
+                ArrayList<String> currentInvoice = invoices.get(row);
+                Invoice invoice = new Invoice(currentInvoice.get(0), currentInvoice.get(1), currentInvoice.get(2), getInvoiceArrayList(currentInvoice.get(3)),
+                        checkBoolean(currentInvoice.get(4)), Double.parseDouble(currentInvoice.get(5)), Double.parseDouble(currentInvoice.get(6)),
+                        Double.parseDouble(currentInvoice.get(7)), checkBoolean(currentInvoice.get(8)), Double.parseDouble(currentInvoice.get(9)));
+                Gson gson = new Gson();
+                String invoiceJSON = gson.toJson(invoice, Invoice.class);
+                invoicesJSON.set(row, invoiceJSON);
+                fileReaderWriter.writeFile(invoiceJSON, "Invoices.txt");
 
             }
         });
     }
 
+    public ArrayList<String> getInvoiceArrayList(String invoice) {
+        String[] invoiceArr = invoice.split(" ");
+        ArrayList<String> arrayList = new ArrayList<String>();
+        Collections.addAll(arrayList, invoiceArr);
+        return arrayList;
+    }
 
+    public boolean checkBoolean(String bool) {
+        if (bool.equals("true")) return true;
+        return false;
+    }
 
 
     public void createTable() {
