@@ -4,6 +4,8 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 
 public class DisplayOpenInvoicesScreen extends JFrame{
@@ -23,6 +25,12 @@ public class DisplayOpenInvoicesScreen extends JFrame{
         this.setLocationRelativeTo(null);
         this.invoices = invoices;
         createTable();
+        openInvoicesTable.addPropertyChangeListener(new PropertyChangeListener() {
+            @Override
+            public void propertyChange(PropertyChangeEvent evt) {
+
+            }
+        });
     }
 
     public void createTable() {
