@@ -42,7 +42,9 @@ public class DisplayOpenInvoicesScreen extends JFrame{
         ));
 
         TableColumnModel columns = openInvoicesTable.getColumnModel();
-        columns.getColumn(0).setMinWidth(150);
+        columns.getColumn(0).setMinWidth(125);
+        columns.getColumn(1).setMinWidth(125);
+        columns.getColumn(3).setMinWidth(400);
     }
 
     //ADD METHOD OF SORTING BY ACTIVE

@@ -28,8 +28,8 @@ public class DisplayClosedInvoicesScreen extends JFrame {
     public void createTable() {
 
         String[][] invoiceData = new String[invoices.size()][];
-        String[] columnNames = {"Invoice ID", "Customer", "Employee", "Payment Type", "Invoice Date",
-                "Products", "Status", "Amount Paid", "Tax Rate", "Pickup", "Delivery","Delivery Charge"};
+        String[] columnNames = { "Customer Name", "Employee Name", "Invoice Date",
+                "Products", "Status", "Amount Paid", "Tax Rate","Delivery","Delivery Charge", "Total Cost"};
 
         for (int i = 0; i < invoices.size(); i++) {
             ArrayList<String> row = invoices.get(i);
@@ -42,7 +42,9 @@ public class DisplayClosedInvoicesScreen extends JFrame {
         ));
 
         TableColumnModel columns = closedInvoicesTable.getColumnModel();
-        columns.getColumn(0).setMinWidth(150);
+        columns.getColumn(0).setMinWidth(125);
+        columns.getColumn(1).setMinWidth(125);
+        columns.getColumn(3).setMinWidth(400);
     }
 
     //ADD METHOD OF SORTING BY ACTIVE

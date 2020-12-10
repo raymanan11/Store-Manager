@@ -1,8 +1,10 @@
 package JavaSwingGUI;
 
 import com.google.gson.Gson;
+import com.sun.source.tree.ArrayAccessTree;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.*;
 
 public class FileReaderWriter {
@@ -82,6 +84,64 @@ public class FileReaderWriter {
         return null;
     }
 
+    public ArrayList<ArrayList<String>> getOpenInvoicesDate(String fileName) {
+        try {
+            ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
+            ArrayList<String> invoiceInfo;
+            Scanner file = new Scanner(new File(fileName));
+            Gson gson = new Gson();
+            ArrayList<LocalDate> key = new ArrayList<>();
+            Map<LocalDate, ArrayList<ArrayList<String>>> invoicesMap = new HashMap<>();
+            while (file.hasNextLine()) {
+                invoiceInfo = new ArrayList<>();
+                Invoice invoice = gson.fromJson(file.nextLine(), Invoice.class);
+                if (invoice.getActive()) {
+                    getInvoice(invoiceInfo, invoice);
+                    addInvoiceDate(invoiceInfo, key, invoicesMap, invoice);
+                }
+                // add values from products class into products arraylist
+            }
+            Collections.sort(key);
+            for(LocalDate date : key) resultSet.addAll(invoicesMap.get(date));
+            file.close();
+            return resultSet;
+        }
+        catch (IOException excpt) {
+            System.out.println("File not found");
+        }
+        return null;
+    }
+
+    public ArrayList<ArrayList<String>> getClosedInvoicesAmount(String fileName) {
+        try {
+            ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
+            ArrayList<String> invoiceInfo;
+            Scanner file = new Scanner(new File(fileName));
+            Gson gson = new Gson();
+            ArrayList<Double> key = new ArrayList<>();
+            Map<Double, ArrayList<ArrayList<String>>> invoicesMap = new HashMap<>();
+            while (file.hasNextLine()) {
+                invoiceInfo = new ArrayList<>();
+                Invoice invoice = gson.fromJson(file.nextLine(), Invoice.class);
+                if (!invoice.getActive()) {
+                    System.out.println("hi");
+                    getInvoice(invoiceInfo, invoice);
+                    System.out.println(invoiceInfo);
+                    addInvoiceAmount(invoiceInfo, key, invoicesMap, invoice);
+                }
+                // add values from products class into products arraylist
+            }
+            Collections.sort(key);
+            for (int i = 0; i < key.size(); i++) resultSet.addAll(invoicesMap.get(key.get(key.size() - 1 - i)));
+            file.close();
+            return resultSet;
+        }
+        catch (IOException excpt) {
+            System.out.println("File not found");
+        }
+        return null;
+    }
+
     public ArrayList<ArrayList<String>> getEmployeeInfo(String fileName) {
         try {
             ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
@@ -144,6 +204,33 @@ public class FileReaderWriter {
         }
     }
 
+    private void addInvoiceDate(ArrayList<String> invoiceInfo, ArrayList<LocalDate> dates, Map<LocalDate, ArrayList<ArrayList<String>>> invoicesMap, Invoice invoice) {
+        if (!dates.contains(invoice.getInvoiceDate())) {
+            ArrayList<ArrayList<String>> invoiceInformation = new ArrayList<>();
+            if (invoice.getActive()) {
+                invoiceInformation.add(invoiceInfo);
+                dates.add(invoice.getInvoiceDate());
+                invoicesMap.put(invoice.getInvoiceDate(), invoiceInformation);
+            }
+        }
+        else {
+            invoicesMap.get(invoice.getInvoiceDate()).add(invoiceInfo);
+        }
+    }
+
+    private void addInvoiceAmount(ArrayList<String> invoiceInfo, ArrayList<Double> invoiceAmount, Map<Double, ArrayList<ArrayList<String>>> invoicesMap, Invoice invoice) {
+        if (!invoiceAmount.contains(invoice.getTotalCost())) {
+            ArrayList<ArrayList<String>> invoiceInformation = new ArrayList<>();
+            System.out.println("invoice is not active");
+            invoiceInformation.add(invoiceInfo);
+            invoiceAmount.add(invoice.getTotalCost());
+            invoicesMap.put(invoice.getTotalCost(), invoiceInformation);
+        }
+        else {
+            invoicesMap.get(invoice.getTotalCost()).add(invoiceInfo);
+        }
+    }
+
     private void getProducts(ArrayList<String> productInfo, Products product) {
         productInfo.add(product.getProductName());
         productInfo.add(String.valueOf(product.getRetailPrice()));
@@ -158,9 +245,9 @@ public class FileReaderWriter {
     }
 
     private void getEmployees(ArrayList<String> employeeInfo, Employee employee) {
-        ArrayList<String> invcoiceInfo = readFile("Invoices.txt");
+        ArrayList<String> invoiceInfo = readFile("Invoices.txt");
         double totalSales = 0;
-        for (String invoiceJSON : invcoiceInfo) {
+        for (String invoiceJSON : invoiceInfo) {
             Invoice invoice = gson.fromJson(invoiceJSON, Invoice.class);
             if (employee.getEmployeeName().equals(invoice.getInvoiceEmployee())) {
                 totalSales += invoice.getTotalCost();
@@ -171,6 +258,20 @@ public class FileReaderWriter {
         employeeInfo.add(String.format("%.2f", totalSales * (employee.getEmployeeCommissionPercentage() / 100)));
     }
 
-//    private void openInvoice
+    private void getInvoice(ArrayList<String> invoiceInfo, Invoice invoice) {
+        System.out.println("get invoice");
+        invoiceInfo.add(invoice.getInvoiceCustomer());
+        invoiceInfo.add(invoice.getInvoiceEmployee());
+        invoiceInfo.add(invoice.getInvoiceDate().toString());
+        invoiceInfo.add(invoice.getInvoiceProducts().toString());
+        if (invoice.getActive()) invoiceInfo.add("true");
+        else invoiceInfo.add("false");
+        invoiceInfo.add(String.valueOf(invoice.getAmountPaid()));
+        invoiceInfo.add(String.valueOf(invoice.getTaxRate()));
+        if (invoice.isDelivery()) invoiceInfo.add("true");
+        else invoiceInfo.add("false");
+        invoiceInfo.add(String.valueOf(invoice.getDeliveryCharge()));
+        invoiceInfo.add(String.valueOf(invoice.getTotalCost()));
+    }
 
 }

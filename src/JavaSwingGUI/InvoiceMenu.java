@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class InvoiceMenu extends JFrame{
     private JPanel invoiceMenuPanel;
@@ -30,21 +31,25 @@ public class InvoiceMenu extends JFrame{
             }
         });
 
-//        openInvoicesClicked.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                DisplayOpenInvoicesScreen displayOpenInvoicesScreen = new DisplayOpenInvoicesScreen();
-//                displayOpenInvoicesScreen.setVisible(true);
-//            }
-//        });
-//
-//        closedInvoicesClicked.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                DisplayClosedInvoicesScreen displayClosedInvoicesScreen = new DisplayClosedInvoicesScreen();
-//                displayClosedInvoicesScreen.setVisible(true);
-//            }
-//        });
+        openInvoicesClicked.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FileReaderWriter fileReaderWriter = new FileReaderWriter();
+                ArrayList<ArrayList<String>> openInvoices = fileReaderWriter.getOpenInvoicesDate("Invoices.txt");
+                DisplayOpenInvoicesScreen displayOpenInvoicesScreen = new DisplayOpenInvoicesScreen(openInvoices);
+                displayOpenInvoicesScreen.setVisible(true);
+            }
+        });
+
+        closedInvoicesClicked.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FileReaderWriter fileReaderWriter = new FileReaderWriter();
+                ArrayList<ArrayList<String>> closedInvoices = fileReaderWriter.getClosedInvoicesAmount("Invoices.txt");
+                DisplayClosedInvoicesScreen displayClosedInvoicesScreen = new DisplayClosedInvoicesScreen(closedInvoices);
+                displayClosedInvoicesScreen.setVisible(true);
+            }
+        });
 
     }
 }
