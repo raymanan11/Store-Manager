@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.ArrayList;
 
 public class InvoiceMenu extends JFrame{
@@ -13,6 +14,7 @@ public class InvoiceMenu extends JFrame{
     private JButton openInvoicesClicked;
     private JButton closedInvoicesClicked;
     private JPanel panelTop;
+    private JButton allInvoicesClicked;
 
     public InvoiceMenu() {
         super("Invoice Menu");
@@ -51,6 +53,15 @@ public class InvoiceMenu extends JFrame{
             }
         });
 
+        allInvoicesClicked.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FileReaderWriter fileReaderWriter = new FileReaderWriter();
+                ArrayList<ArrayList<String>> allInvoices = fileReaderWriter.getAllInvoices("Invoices.txt");
+                DisplayAllInvoices displayAllInvoices = new DisplayAllInvoices(allInvoices);
+                displayAllInvoices.setVisible(true);
+            }
+        });
     }
 }
 

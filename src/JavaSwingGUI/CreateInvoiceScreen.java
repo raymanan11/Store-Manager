@@ -140,7 +140,7 @@ public class CreateInvoiceScreen extends JFrame{
                     messageWindow.showWindow("Please enter a valid number.");
                 }
                 catch(DateTimeParseException excpt) {
-                    messageWindow.showWindow("Please enter a valid invoice date. Please enter date as format MM/dd/yyy");
+                    messageWindow.showWindow("Please enter a valid invoice date. Please enter date as format dd/MM/yyyy");
                 }
             }
         });

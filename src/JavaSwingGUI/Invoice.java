@@ -21,7 +21,6 @@ public class Invoice {
 
 
     public Invoice() {
-        invoiceID = "";
         invoiceCustomer = null;
         invoiceDate = null;
         invoiceProducts = null;
@@ -128,7 +127,7 @@ public class Invoice {
     }
 
     public void setInvoiceDate(String invoiceDate) {
-        this.invoiceDate = LocalDate.parse(invoiceDate, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+        this.invoiceDate = LocalDate.parse(invoiceDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 
 //    public void setActive(boolean active) {

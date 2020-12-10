@@ -34,7 +34,9 @@
             <children>
               <component id="9e7ac" class="javax.swing.JTable" binding="openInvoicesTable">
                 <constraints/>
-                <properties/>
+                <properties>
+                  <enabled value="false"/>
+                </properties>
               </component>
             </children>
           </scrollpane>

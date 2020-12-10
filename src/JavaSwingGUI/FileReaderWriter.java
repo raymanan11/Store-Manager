@@ -111,6 +111,29 @@ public class FileReaderWriter {
         return null;
     }
 
+    public ArrayList<ArrayList<String>> getAllInvoices(String fileName) {
+        try {
+            ArrayList<ArrayList<String>> resultSet = new ArrayList<>();
+            ArrayList<String> invoiceInfo;
+            Scanner file = new Scanner(new File(fileName));
+            Gson gson = new Gson();
+            Map<Double, ArrayList<ArrayList<String>>> invoicesMap = new HashMap<>();
+            while (file.hasNextLine()) {
+                invoiceInfo = new ArrayList<>();
+                Invoice invoice = gson.fromJson(file.nextLine(), Invoice.class);
+                getInvoice(invoiceInfo, invoice);
+                resultSet.add(invoiceInfo);
+                // add values from products class into products arraylist
+            }
+            file.close();
+            return resultSet;
+        }
+        catch (IOException excpt) {
+            System.out.println("File not found");
+        }
+        return null;
+    }
+
     public ArrayList<ArrayList<String>> getClosedInvoicesAmount(String fileName) {
         try {
             ArrayList<ArrayList<String>> resultSet = new ArrayList<>();

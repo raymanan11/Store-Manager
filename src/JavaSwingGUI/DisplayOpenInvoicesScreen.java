@@ -30,40 +30,7 @@ public class DisplayOpenInvoicesScreen extends JFrame{
         this.invoices = invoices;
         createTable();
 
-        openInvoicesTable.getModel().addTableModelListener(new TableModelListener() {
-            @Override
-            public void tableChanged(TableModelEvent e) {
-                ArrayList<String> invoicesJSON = fileReaderWriter.readFile("Invoices.txt");
-                int column = openInvoicesTable.getSelectedColumn();
-                int row = openInvoicesTable.getSelectedRow();
-                System.out.println(openInvoicesTable.getValueAt(row,column));
-                System.out.println(openInvoicesTable.getColumnName(column));
-                invoices.get(row).set(column,String.valueOf(openInvoicesTable.getValueAt(row,column)));
-                ArrayList<String> currentInvoice = invoices.get(row);
-                Invoice invoice = new Invoice(currentInvoice.get(0), currentInvoice.get(1), currentInvoice.get(2), getInvoiceArrayList(currentInvoice.get(3)),
-                        checkBoolean(currentInvoice.get(4)), Double.parseDouble(currentInvoice.get(5)), Double.parseDouble(currentInvoice.get(6)),
-                        Double.parseDouble(currentInvoice.get(7)), checkBoolean(currentInvoice.get(8)), Double.parseDouble(currentInvoice.get(9)));
-                Gson gson = new Gson();
-                String invoiceJSON = gson.toJson(invoice, Invoice.class);
-                invoicesJSON.set(row, invoiceJSON);
-                fileReaderWriter.writeFile(invoiceJSON, "Invoices.txt");
-
-            }
-        });
     }
-
-    public ArrayList<String> getInvoiceArrayList(String invoice) {
-        String[] invoiceArr = invoice.split(" ");
-        ArrayList<String> arrayList = new ArrayList<String>();
-        Collections.addAll(arrayList, invoiceArr);
-        return arrayList;
-    }
-
-    public boolean checkBoolean(String bool) {
-        if (bool.equals("true")) return true;
-        return false;
-    }
-
 
     public void createTable() {
 
@@ -87,5 +54,4 @@ public class DisplayOpenInvoicesScreen extends JFrame{
         columns.getColumn(3).setMinWidth(400);
     }
 
-    //ADD METHOD OF SORTING BY ACTIVE
 }
