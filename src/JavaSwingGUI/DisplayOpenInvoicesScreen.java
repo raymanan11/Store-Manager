@@ -1,10 +1,14 @@
 package JavaSwingGUI;
 
+import com.google.gson.Gson;
+
 import javax.swing.*;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
-import java.util.ArrayList;
+import java.beans.PropertyChangeListener;import java.util.ArrayList;
 
 public class DisplayOpenInvoicesScreen extends JFrame{
     private JPanel invoicesPanel;
@@ -23,7 +27,28 @@ public class DisplayOpenInvoicesScreen extends JFrame{
         this.setLocationRelativeTo(null);
         this.invoices = invoices;
         createTable();
+
+        openInvoicesTable.getModel().addTableModelListener(new TableModelListener() {
+            @Override
+            public void tableChanged(TableModelEvent e) {
+                int column = openInvoicesTable.getSelectedColumn();
+                int row = openInvoicesTable.getSelectedRow();
+                System.out.println(openInvoicesTable.getValueAt(row,column));
+                System.out.println(openInvoicesTable.getColumnName(column));
+                invoices.get(row).set(column,String.valueOf(openInvoicesTable.getValueAt(row,column)));
+                System.out.println(invoices);
+//                ArrayList<String> invoicesJson;
+//                invoicesJson = fileReaderWriter.readFile("Invoices.txt");
+//                Gson gson = new Gson();
+//                Invoice invoice = gson.fromJson(invoicesJson.get(row), Invoice.class);
+                fileReaderWriter.writeFile(invoices.get(row), "Invoices.txt");
+
+            }
+        });
     }
+
+
+
 
     public void createTable() {
 
