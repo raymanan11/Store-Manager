@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/DisplayOpenInvoicesScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/DisplayOpenInvoicesScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaSwingGUI/FileReaderWriter.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -257,58 +255,6 @@
     <option name="height" value="1080" />
   </component>
   <component name="ProjectId" id="1kU7hSgnFqSlsBpggl3LZmnkvyb" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Store Manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Store-Manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Store Manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Store-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Store Manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Store-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaSwingGUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Store Manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Store-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaSwingGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="DisplayClosedInvoicesScreen" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="Store Manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Store-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaSwingGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="DisplayOpenInvoicesScreen" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="Store Manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Store-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaSwingGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="InvoiceMenu" type="e9f4de52:FormNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -319,24 +265,13 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="98" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="242" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="360" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -355,7 +290,7 @@
   <component name="SQLPlugin.ProjectConfiguration">
     <queries />
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -433,30 +368,34 @@
     <state x="440" y="94" key="#Project_Structure" timestamp="1607143121054">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1607561046144">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607561046144" />
     <state x="565" y="332" key="FileChooserDialogImpl" timestamp="1607384208121">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="565" y="332" key="FileChooserDialogImpl/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607384208121" />
-    <state width="1877" height="193" key="GridCell.Tab.0.bottom" timestamp="1607555420564">
+    <state width="1877" height="193" key="GridCell.Tab.0.bottom" timestamp="1607562805512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.bottom/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607555420564" />
-    <state width="1877" height="193" key="GridCell.Tab.0.center" timestamp="1607555420564">
+    <state width="1877" height="193" key="GridCell.Tab.0.bottom/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607562805512" />
+    <state width="1877" height="193" key="GridCell.Tab.0.center" timestamp="1607562805512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.center/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607555420564" />
-    <state width="1877" height="193" key="GridCell.Tab.0.left" timestamp="1607555420564">
+    <state width="1877" height="193" key="GridCell.Tab.0.center/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607562805512" />
+    <state width="1877" height="193" key="GridCell.Tab.0.left" timestamp="1607562805511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.left/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607555420564" />
-    <state width="1877" height="193" key="GridCell.Tab.0.right" timestamp="1607555420564">
+    <state width="1877" height="193" key="GridCell.Tab.0.left/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607562805511" />
+    <state width="1877" height="193" key="GridCell.Tab.0.right" timestamp="1607562805512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.right/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607555420564" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1607552761820">
+    <state width="1877" height="193" key="GridCell.Tab.0.right/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607562805512" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1607561367040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607552761820" />
+    <state x="440" y="94" key="SettingsEditor/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607561367040" />
     <state x="1319" y="318" key="UIDesigner.ListEditorDialog" timestamp="1607416305840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -480,7 +419,6 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/JavaSwingGUI/Customers.java</url>
           <line>127</line>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
